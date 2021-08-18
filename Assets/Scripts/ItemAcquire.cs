@@ -33,6 +33,6 @@ public class ItemAcquire : MonoBehaviour
     }
     protected void OnTriggerExit2D(Collider2D collision)
     {
-        GIcon.SetActive(true);
+        GIcon.SetActive(false);
     }
 }
