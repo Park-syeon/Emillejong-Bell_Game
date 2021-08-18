@@ -1,0 +1,22 @@
+아이템 휙득 콜라이더 생성 설명서
+
+아이템ID는 Assets>Resources>itemdatabase 파일로부터 읽을 수 있고, 아이템 ID를 바꿀 때는 itemdatabase에서 수정하고 Assets>Scripts>Constants에서 해당하는 상수 값도 수정해 주어야 한다.
+
+씬에 "GIcon" 오브젝트가 꼭 있어야 한다. (2D > Sprites > Square)
+
+콜라이더 오브젝트에 GeneralAcquire/ItemAcquire/ShovelAcquire 스크립트를 넣는다.
+GeneralAcquire: 일반 탐색 휙득 아이템. connectID는 넣을 필요 없고 각 콜라이더에서 얻을 아이템 id를 getItemID에 넣어줌.
+
+ItemAcquire: 아이템을 콜라이더에 사용 했을 때 휙득가능한 아이템. connectedID는 사용햐여하는 아이템의 id를 넣어주고 getItemID는 넣을 필요 없다.
+
+SovelAcquire: 삽 아이템을 이용했을 때 얻을 수 있는 아이템. connected엔 삽의 아이템id, getItemID에는 각 콜라이더에서 얻을 아이템의 id를 넣어준다.
+
+
+Diary2, HalfKey1 얻을 수 있는  Bookshelf
+.
+GamseManager에 Bookshelf 스크립트를 추가해준다. (이미추가돼있으면 말구)
+게임오브젝트 Assets>Prefabs>Books 를 씬에 추가하고 각 책 오브젝트를 위 스크립트의 Books 에 추가해준다.(드래그로)
+MonkDiary2 에는 스님의일기잔2를 휙득할 수 있는 배열대로 책 오브젝트들을 넣어준다.
+Half Key1에는 반쪽자리 열쇠1을 휙득할 ㅜㅅ 있는 배열대로 책 오브젝트들을 넣어준다.
+
+//bookshelf 를 활성화할 수 있는 콜라이더는 나중에 좀 이따 만들게요
