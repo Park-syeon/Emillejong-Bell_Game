@@ -72,12 +72,12 @@ public class Inventory : MonoBehaviour
         tabActivated = false;
         itemActivated = false;
         clearEmptySlot();
-
+/*  //인벤토리에 데이터베이스에 있는 모든 아이템 집어넣기
         for(int i = 0; i < DatabaseManager.instance.itemList.Count; i++)
         {
             InventoryItemList.Add(DatabaseManager.instance.itemList[i]);
         }
-
+*/
     }
     public void RemoveSlot()
     {
@@ -233,6 +233,7 @@ public class Inventory : MonoBehaviour
             if (_itemID == DatabaseManager.instance.itemList[i].itemID)
             {
                 InventoryItemList.Add(DatabaseManager.instance.itemList[i]);
+                Debug.Log("아이템 " + DatabaseManager.instance.itemList[i].itemName + " 을 얻었다.");
                 return;
             }
 

@@ -34,7 +34,7 @@ public class Bookshelf : MonoBehaviour
         
         for(int i = 0; i < books.Length; i++)
         {
-            color.g = i * 0.2f;
+            color.b = 1f;
             books[i].GetComponent<SpriteRenderer>().color = color;
         }
         color.b = 0.5f;
@@ -72,7 +72,7 @@ public class Bookshelf : MonoBehaviour
     void Start()
     {
         instance = this;
-        setActive = true;
+        setActive = false;
         bookSelected = false;
         FirstActive = true;
         selectedBookFrame.SetActive(false);
