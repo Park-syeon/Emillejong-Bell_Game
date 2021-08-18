@@ -9,8 +9,9 @@ public class GeneralAquire : ItemAcquire
     {
         GIcon.SetActive(true);
         GIcon.transform.position = this.gameObject.transform.position;
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.F))
         {
+            Debug.Log("G¸¦´­·¶´Ù");
             Inventory.instance.GetAnItem(getItemID);
         }
     }

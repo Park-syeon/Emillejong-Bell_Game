@@ -72,7 +72,7 @@ public class Bookshelf : MonoBehaviour
     void Start()
     {
         instance = this;
-        setActive = true;
+        setActive = false;
         bookSelected = false;
         FirstActive = true;
         selectedBookFrame.SetActive(false);
