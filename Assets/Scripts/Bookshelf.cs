@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Bookshelf : MonoBehaviour
 {
     public static Bookshelf instance;
-    private bool setActive;
+    private bool activated;
 
     public GameObject[] books;
     public GameObject selectedBookFrame;
@@ -18,6 +18,16 @@ public class Bookshelf : MonoBehaviour
     private bool bookSelected;
     private int cur;
     private int selectedBook;
+
+    //getsetÇÔ¼ö
+    public bool getActivated()
+    {
+        return activated;
+    }
+    public void setActivated(bool _is)
+    {
+        activated = _is;
+    }
 
     private void SelectBook()
     {
@@ -72,7 +82,7 @@ public class Bookshelf : MonoBehaviour
     void Start()
     {
         instance = this;
-        setActive = false;
+        activated = false;
         bookSelected = false;
         FirstActive = true;
         selectedBookFrame.SetActive(false);
@@ -81,7 +91,7 @@ public class Bookshelf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (setActive)
+        if (activated)
         {
             if (FirstActive)
             {
@@ -129,7 +139,7 @@ public class Bookshelf : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
-                setActive = false;
+                activated = false;
                 bookSelected = false;
                 FirstActive = true;
                 selectedBookFrame.SetActive(false);
