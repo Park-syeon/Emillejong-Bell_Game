@@ -5,14 +5,9 @@ using UnityEngine;
 public class GeneralAquire : ItemAcquire
 {
     public int getItemID;
-    protected override void OnTriggerStay2D(Collider2D collision)
+    protected override void Do()
     {
-        GIcon.SetActive(true);
-        GIcon.transform.position = this.gameObject.transform.position;
-        if (Input.GetKeyDown(KeyCode.F))
-        {
             Debug.Log("G¸¦´­·¶´Ù");
             Inventory.instance.GetAnItem(getItemID);
-        }
     }
 }
