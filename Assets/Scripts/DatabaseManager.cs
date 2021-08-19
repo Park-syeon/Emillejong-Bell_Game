@@ -72,7 +72,7 @@ public class DatabaseManager : MonoBehaviour
     public Item item;
     private int currentItemID;
     private int[] EmilleRoom = new int[3] { 9,9,9 };    //0이면 해제된거, 0이 아니면 잠긴거
-    private int[] Basement = new int[2] { 9, 9 }; //0이면 해제된거, 0이 아니면 잠긴거
+    private int[] Basement = new int[3] { 9, 9, 9 }; //0이면 해제된거, 0이 아니면 잠긴거
     private bool IsCandleOn = false;
     private bool IsRealEmille = false;  //이거 왜 있는지 모르겠음
 
@@ -170,7 +170,7 @@ public class DatabaseManager : MonoBehaviour
     }
     public bool IsBasementOpened()
     {
-        int i = Basement[0] + Basement[1];
+        int i = Basement[0] + Basement[1] + Basement[2];
         if (i == 0)
             return true;
         else
@@ -209,6 +209,13 @@ public class DatabaseManager : MonoBehaviour
             case Constants.half_key2:
                 Basement[1] = 0;
                 return;
+        }
+    }
+    public void HalfKeyUseActivate(bool _is)
+    {
+        if (_is)
+        {
+            Basement[2] = 0;
         }
     }
     public void Letcandleon(bool _is)
