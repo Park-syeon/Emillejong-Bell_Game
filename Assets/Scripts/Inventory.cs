@@ -60,6 +60,22 @@ public class Inventory : MonoBehaviour
 
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
 
+    //getsetÇÔ¼ö
+    public bool getActivated()
+    {
+        return activated;
+    }
+    public void setActivated(bool _is)
+    {
+        activated = _is;
+        if (!activated)
+        {
+            StopAllCoroutines();
+            go.SetActive(false);
+            tabActivated = false;
+            itemActivated = false;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

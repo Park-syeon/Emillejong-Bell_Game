@@ -48,7 +48,7 @@ public class UseMonkDiary3 : MonoBehaviour
             Inventory.instance.RemoveAnItem(Constants.previous_monkdiary3_ID); ;
             Debug.Log("여기까지4");
 
-            Inventory.instance.goSetactive(false);
+            Inventory.instance.setActivated(false);
 
             Debug.Log("해독된 스님의 일기장 #3을 얻었다.");
         }
