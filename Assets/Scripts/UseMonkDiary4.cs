@@ -141,8 +141,8 @@ public class UseMonkDiary4 : MonoBehaviour
         Debug.Log("일기장4를 얻었다.");
         Inventory.instance.GetAnItem(Constants.real_monkdiary4_ID);
         Inventory.instance.RemoveAnItem(Constants.previous_monkdiary4_ID);
-        
-        Inventory.instance.goSetactive(false);
+
+        Inventory.instance.setActivated(false);
     }
     private void ResetDiary4()
     {
