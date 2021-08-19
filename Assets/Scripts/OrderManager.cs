@@ -31,6 +31,14 @@ public class OrderManager : MonoBehaviour
         {
             //thePlayer.setCanMove(true);
         }
+        if (theBookshelf.getActivated())
+        {
+            theInventory.setStopKeyInput(true);
+        }
+        else if (!theBookshelf.getActivated())
+        {
+            theInventory.setStopKeyInput(false);
+        }
 
 
     }

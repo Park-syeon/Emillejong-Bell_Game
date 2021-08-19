@@ -76,6 +76,10 @@ public class Inventory : MonoBehaviour
             itemActivated = false;
         }
     }
+    public void setStopKeyInput(bool _is)
+    {
+        stopKeyInput = _is;
+    }
 
     // Start is called before the first frame update
     void Start()
