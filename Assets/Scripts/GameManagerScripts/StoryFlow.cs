@@ -49,7 +49,7 @@ public class StoryFlow : MonoBehaviour
     {
         if (!CanGetOutOfMonkRoom)
         {
-            //스님방에서 나갈 수 없음
+            //스님방에서 나갈 수 없음 또는 스님방만 들어갈 수 있음?
         }
         if (CanGetIntoBasement)
         {

@@ -22,10 +22,10 @@ public class Requirement : MonoBehaviour
     #endregion
 
 
-    private int[] EmilleRoom = new int[3] { 9, 9, 9 };    //0이면 해제된거, 0이 아니면 잠긴거
+    private int[] EmilleRoom = new int[3] { 9, 9, 9 };    //0이면 해제된거, 0이 아니면 잠긴거    //에밀레방 들어갈 수 있는지
     private int[] Basement = new int[2] { 9, 9 }; //0이면 해제된거, 0이 아니면 잠긴거
-    private bool HalfKeyAble = false;
-    private bool IsCandleOn = false;
+    private bool HalfKeyAble = false;   //연못에서 다섯바퀴 돌아서 반쪽자리 키 사용할 수 있는지
+    private bool IsCandleOn = false;    //스님방에 양초가 켜져있는지//그래서 스님의일기장1,2를 사용할 ㅜㅅ 있는지
     private bool IsRealEmille = false;  //이거 왜 있는지 모르겠음
 
     public bool GetIsCandleOn()
