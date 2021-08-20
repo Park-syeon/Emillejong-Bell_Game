@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     }
     #endregion Singleton
 
+    private bool skipB;
     public Text text;
     public SpriteRenderer rendererSprite;
     public SpriteRenderer rendererDialogueWindow;
@@ -112,12 +113,19 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
     }
+
+    public void Skip()
+    {
+        skipB = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        //click = false;
         if (talking)
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (skipB)//
             {
                 count++;
                 text.text = "";
@@ -133,6 +141,6 @@ public class DialogueManager : MonoBehaviour
                 }
             }
         }
-        
+        skipB = false;
     }
 }
