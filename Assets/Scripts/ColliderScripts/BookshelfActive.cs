@@ -17,5 +17,6 @@ public class BookshelfActive : ItemAcquire
     protected override void Do()
     {
         Bookshelf.instance.setActivated(true);
+        Debug.Log("GÅ¬¸¯ÇÔ");
     }
 }

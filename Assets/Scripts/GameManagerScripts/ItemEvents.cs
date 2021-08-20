@@ -68,8 +68,11 @@ public class ItemEvents : MonoBehaviour
     }
     private void monkdiary2()
     {
-        Inventory.instance.GetAnItem(Constants.real_monkdiary2_ID);
-        Inventory.instance.RemoveAnItem(itemID);
+        if (Requirement.instance.GetIsCandleOn())
+        {
+            Inventory.instance.GetAnItem(Constants.real_monkdiary2_ID);
+            Inventory.instance.RemoveAnItem(itemID);
+        }
     }
     private void monkdiary1()
     {
