@@ -71,10 +71,6 @@ public class DatabaseManager : MonoBehaviour
     public float[] var;
     public Item item;
     private int currentItemID;
-    private int[] EmilleRoom = new int[3] { 9,9,9 };    //0이면 해제된거, 0이 아니면 잠긴거
-    private int[] Basement = new int[3] { 9, 9, 9 }; //0이면 해제된거, 0이 아니면 잠긴거
-    private bool IsCandleOn = false;
-    private bool IsRealEmille = false;  //이거 왜 있는지 모르겠음
 
 
     public string[] switch_name;
@@ -160,71 +156,13 @@ public class DatabaseManager : MonoBehaviour
     {
         return currentItemID;
     }
-    public bool GetIsCandleOn()
-    {
-        return IsCandleOn;
-    }
-    public bool GetIsRealEmille()
-    {
-        return IsRealEmille;
-    }
-    public bool IsBasementOpened()
-    {
-        int i = Basement[0] + Basement[1] + Basement[2];
-        if (i == 0)
-            return true;
-        else
-            return false;
-    }
+    
 
     //각 데이터 수정 함수
     public void NewCurrentItemID(int _itemID)
     {
         currentItemID = _itemID;
     }
-    public void EmilleRoomUnlock(int _itemID)
-    {
-        switch (_itemID)
-        {
-            case Constants.key34:
-                EmilleRoom[0] = 0;
-                break;
-            case 90065:
-                EmilleRoom[1] = 0;
-                break;
-            case 90077:
-                EmilleRoom[2] = 0;
-                break;
-            default:
-                break;
-        }
-    }
-    public void BasementUnlock(int _itemID)
-    {
-        switch (_itemID)
-        {
-            case Constants.half_key1:
-                Basement[0] = 0;
-                return;
-            case Constants.half_key2:
-                Basement[1] = 0;
-                return;
-        }
-    }
-    public void HalfKeyUseActivate(bool _is)
-    {
-        if (_is)
-        {
-            Basement[2] = 0;
-        }
-    }
-    public void Letcandleon(bool _is)
-    {
-        IsCandleOn = _is;
-    }
-    public void Letrealemille(bool _is)
-    {
-        IsRealEmille = _is;
-    }
+    
 }
 

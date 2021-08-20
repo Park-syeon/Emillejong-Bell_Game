@@ -64,7 +64,7 @@ public class ItemEvents : MonoBehaviour
 
     private void ItemRock()
     {
-        DatabaseManager.instance.Letcandleon(true);
+        Requirement.instance.Letcandleon(true);
     }
     private void monkdiary2()
     {
@@ -73,7 +73,7 @@ public class ItemEvents : MonoBehaviour
     }
     private void monkdiary1()
     {
-        if (DatabaseManager.instance.GetIsCandleOn())
+        if (Requirement.instance.GetIsCandleOn())
         {
             Inventory.instance.GetAnItem(Constants.real_monkdiary1_ID);
             Inventory.instance.RemoveAnItem(itemID);
@@ -86,7 +86,7 @@ public class ItemEvents : MonoBehaviour
     }
     private void key346577()
     {
-        DatabaseManager.instance.EmilleRoomUnlock(itemID);
+        Requirement.instance.EmilleRoomUnlock(itemID);
         Inventory.instance.RemoveAnItem(itemID);
     }
     private void realEmille()
@@ -96,7 +96,8 @@ public class ItemEvents : MonoBehaviour
     }
     private void halfKey()
     {
-        DatabaseManager.instance.BasementUnlock(itemID);
+        Requirement.instance.BasementUnlock(itemID);
+        StoryFlow.instance.SetCanGetIntoBasement(Requirement.instance.IsBasementOpened());
         Inventory.instance.RemoveAnItem(itemID);
     }
 }

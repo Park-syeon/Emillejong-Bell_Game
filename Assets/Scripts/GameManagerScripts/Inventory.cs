@@ -280,6 +280,16 @@ public class Inventory : MonoBehaviour
     {
         itemActivated = _active;
     }
+    public bool FindItem(int _itemID)
+    {
+        for(int i = 0; i< InventoryItemList.Count; i++)
+        {
+            if (InventoryItemList[i].itemID == _itemID)
+                return true;
+        }
+
+        return false;
+    }
 
 
     // Update is called once per frame
