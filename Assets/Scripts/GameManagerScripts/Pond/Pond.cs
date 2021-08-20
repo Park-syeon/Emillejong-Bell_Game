@@ -81,7 +81,7 @@ public class Pond : MonoBehaviour
             CheckCircle();
             if (circleDone)
             {
-                DatabaseManager.instance.HalfKeyUseActivate(true);
+                Requirement.instance.HalfKeyUseActivate(true);
                 Debug.Log("ø≠ºË±∏∏€¿Ã ∫∏¿Œ¥Ÿ.");
                 activated = false;
             }
