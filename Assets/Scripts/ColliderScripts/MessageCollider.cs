@@ -5,14 +5,8 @@ using UnityEngine;
 public class MessageCollider : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("아직 들어갈 수 없습니다.");
     }
 }
