@@ -5,12 +5,28 @@ using UnityEngine.UI;
 
 public class UseMonkDiary3 : MonoBehaviour
 {
+    
     private bool activated;
     public InputField _11003_inputField;
     public string monkdiary3Code;
 
     public static UseMonkDiary3 instance;
 
+    #region ΩÃ±€≈Ê
+    private void Awake()    //ΩÃ±€≈Ê!!
+    {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+    }
+    #endregion
 
     private void Start()
     {

@@ -4,12 +4,27 @@ using UnityEngine;
 
 public class OrderManager : MonoBehaviour
 {
+    static public OrderManager instance;
+    #region 싱글톤
+    private void Awake()    //싱글톤!!
+    {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+    }
+    #endregion
+
     private MovingObject thePlayer;
     private Inventory theInventory;
-//    private Bookshelf theBookshelf;
     private Camera theCamera;
 
-    public GameObject bookshelf;
 
     public void setCanMove()
     {
@@ -25,7 +40,6 @@ public class OrderManager : MonoBehaviour
     {
         thePlayer = FindObjectOfType<MovingObject>();
         theInventory = FindObjectOfType<Inventory>();
- //       theBookshelf = FindObjectOfType<Bookshelf>();
         theCamera = FindObjectOfType<Camera>();
     }
 
@@ -42,36 +56,13 @@ public class OrderManager : MonoBehaviour
             {
                 thePlayer.notMove = false;
             }
-            /*
-            else if (Bookshelf.instance.getActivated())
-            {
-                theInventory.setActivated(false);
-                CameraManager.instance.setStop(true);
-                Vector3 position = new Vector3();
-                position.Set(Bookshelf.instance.gameObject.transform.position.x, Bookshelf.instance.gameObject.transform.position.y, Bookshelf.instance.gameObject.transform.position.z + (-66f));
-                theCamera.transform.position = position;
-                Debug.Log("이동함");
-                //SYeon 여기 카메라 bookshelf 있는데로 이동이요!!
-                thePlayer.notMove = true;
 
-            }
-            */
+            
             else
             {
                 thePlayer.notMove = false;
             }
-/*
-            if (Bookshelf.instance.getActivated())
-            {
-                theInventory.setStopKeyInput(true);
-            }
-            else if (!Bookshelf.instance.getActivated())
-            {
-                theInventory.setStopKeyInput(false);
-                Debug.Log("다시 돌아옴");
-                CameraManager.instance.setStop(false);
-            }
-*/
+
         }
 
 
