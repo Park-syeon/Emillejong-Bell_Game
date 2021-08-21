@@ -58,8 +58,11 @@ public class StoryFlow : MonoBehaviour
     public void SetCanGetIntoBasement(bool _is)
     {
         CanGetIntoBasement = _is;
-        PondToBase.instance.OpenBasement();
-        PondToBase.instance.OpenCollider();
+        if (CanGetIntoBasement)
+        {
+            PondToBase.instance.OpenBasement();
+            PondToBase.instance.OpenCollider();
+        }
     }
 
 
