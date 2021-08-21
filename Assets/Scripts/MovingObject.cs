@@ -15,6 +15,8 @@ public class MovingObject : MonoBehaviour
     //tile 단위로 캐릭터가 움직이도록 함.
     public int walkCount;
     private int currentWalkCount;
+    //캐릭터가 움직일 수 없도록 하는데 관여하는 변수
+    public bool notMove = false;//notMove 변수 선언했고
 
     private bool canMove = true;
     private Animator animator;
@@ -34,7 +36,7 @@ public class MovingObject : MonoBehaviour
     }
     IEnumerator MoveCoroutine()
     {
-        while (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
+        while (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0 && !notMove)//!notMove 추가했고
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -80,7 +82,7 @@ public class MovingObject : MonoBehaviour
     void Update()
     {
         //Move
-        if (canMove)
+        if (canMove && !notMove)//!notMove 추가했고
         {
             if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
@@ -90,4 +92,6 @@ public class MovingObject : MonoBehaviour
         }
 
     }
+
+
 }
