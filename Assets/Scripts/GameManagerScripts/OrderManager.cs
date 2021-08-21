@@ -6,7 +6,7 @@ public class OrderManager : MonoBehaviour
 {
     private MovingObject thePlayer;
     private Inventory theInventory;
-    private Bookshelf theBookshelf;
+//    private Bookshelf theBookshelf;
     private Camera theCamera;
 
     public GameObject bookshelf;
@@ -25,7 +25,7 @@ public class OrderManager : MonoBehaviour
     {
         thePlayer = FindObjectOfType<MovingObject>();
         theInventory = FindObjectOfType<Inventory>();
-        theBookshelf = FindObjectOfType<Bookshelf>();
+ //       theBookshelf = FindObjectOfType<Bookshelf>();
         theCamera = FindObjectOfType<Camera>();
     }
 
@@ -38,31 +38,40 @@ public class OrderManager : MonoBehaviour
             {
                 thePlayer.notMove = true;
             }
-            else if (theBookshelf.getActivated())
+            else if (theInventory.getActivated())
+            {
+                thePlayer.notMove = false;
+            }
+            /*
+            else if (Bookshelf.instance.getActivated())
             {
                 theInventory.setActivated(false);
                 CameraManager.instance.setStop(true);
-                theCamera.transform.position = bookshelf.transform.position;
+                Vector3 position = new Vector3();
+                position.Set(Bookshelf.instance.gameObject.transform.position.x, Bookshelf.instance.gameObject.transform.position.y, Bookshelf.instance.gameObject.transform.position.z + (-66f));
+                theCamera.transform.position = position;
                 Debug.Log("이동함");
                 //SYeon 여기 카메라 bookshelf 있는데로 이동이요!!
                 thePlayer.notMove = true;
 
             }
+            */
             else
             {
                 thePlayer.notMove = false;
             }
-
-            if (theBookshelf.getActivated())
+/*
+            if (Bookshelf.instance.getActivated())
             {
                 theInventory.setStopKeyInput(true);
             }
-            else if (!theBookshelf.getActivated())
+            else if (!Bookshelf.instance.getActivated())
             {
                 theInventory.setStopKeyInput(false);
                 Debug.Log("다시 돌아옴");
                 CameraManager.instance.setStop(false);
             }
+*/
         }
 
 

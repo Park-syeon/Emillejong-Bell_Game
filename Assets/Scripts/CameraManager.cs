@@ -46,6 +46,7 @@ public class CameraManager : MonoBehaviour
                 this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);//1초에 movespeed만큼 이동(타임델타타임의 뜻)
 
             }
+
         }
     }
 }
