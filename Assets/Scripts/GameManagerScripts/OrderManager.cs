@@ -4,12 +4,27 @@ using UnityEngine;
 
 public class OrderManager : MonoBehaviour
 {
+    static public OrderManager instance;
+    #region 싱글톤
+    private void Awake()    //싱글톤!!
+    {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+    }
+    #endregion
+
     private MovingObject thePlayer;
     private Inventory theInventory;
-    private Bookshelf theBookshelf;
     private Camera theCamera;
 
-    public GameObject bookshelf;
 
     public void setCanMove()
     {
@@ -25,7 +40,6 @@ public class OrderManager : MonoBehaviour
     {
         thePlayer = FindObjectOfType<MovingObject>();
         theInventory = FindObjectOfType<Inventory>();
-        theBookshelf = FindObjectOfType<Bookshelf>();
         theCamera = FindObjectOfType<Camera>();
     }
 
@@ -36,32 +50,19 @@ public class OrderManager : MonoBehaviour
         {
             if (theInventory.getActivated())
             {
-                //thePlayer.setCanMove(false);  //여긴 캐릭터 못움직이게
+                thePlayer.notMove = true;
             }
-            else if (theBookshelf.getActivated())
+            else if (theInventory.getActivated())
             {
-                theInventory.setActivated(false);
-                //theCamera.transform.position = bookshelf.transform.position; ㅜㅜ이거 안되네여
-                Debug.Log("이동함");
-                //SYeon 여기 카메라 bookshelf 있는데로 이동이요!!
-                //thePlayer.setCanMove(false);  //여긴 캐릭터 못움직이게
-
+                thePlayer.notMove = false;
             }
+
+            
             else
             {
-                //thePlayer.setCanMove(true);
+                thePlayer.notMove = false;
             }
-            if (theBookshelf.getActivated())
-            {
-                theInventory.setStopKeyInput(true);
-            }
-            else if (!theBookshelf.getActivated())
-            {
-                theInventory.setStopKeyInput(false);
-                Debug.Log("다시 돌아옴");
-                //theCamera.transform.position = thePlayer.transform.position; ㅜㅜ이거 안되네여
-                //SYeon 여기 카메라 다시 캐릭터 있는데로 이동이요!!
-            }
+
         }
 
 

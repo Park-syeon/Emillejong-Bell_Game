@@ -7,7 +7,7 @@ public class GeneralItem : Item
     public override void useItem()
     {
         DatabaseManager.instance.NewCurrentItemID(itemID);
-        Inventory.instance.goSetactive(false);
+        Inventory.instance.setActivated(false);
     }
 
 }

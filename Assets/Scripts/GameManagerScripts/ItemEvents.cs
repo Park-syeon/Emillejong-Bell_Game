@@ -80,6 +80,7 @@ public class ItemEvents : MonoBehaviour
         {
             Inventory.instance.GetAnItem(Constants.real_monkdiary1_ID);
             Inventory.instance.RemoveAnItem(itemID);
+            StoryFlow.instance.GotRealMonkDiary1(true);
         }
     }
     private void brick()

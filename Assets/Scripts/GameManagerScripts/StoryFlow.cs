@@ -6,6 +6,19 @@ public class StoryFlow : MonoBehaviour
 {
     public static StoryFlow instance;
 
+    private void Awake()    //싱글톤!!
+    {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+    }
     //진짜 스님의 일기장1을 휙득 후 스님방에서 나갈 수 있음
     //스님의 진짜 일기장4를 휙득 후 동자승의 메모#8을 휙득할 수 있는 콜라이더 활성화됨
     //연못 다섯바퀴 돌아야 지하실 열쇠사용 가능 (지하실열쇠사용 콜라이더 활성화)
@@ -17,10 +30,24 @@ public class StoryFlow : MonoBehaviour
     private bool CanGetOutOfMonkRoom = false;
     public GameObject ChildMemo8;
     private bool CanGetIntoBasement = false;
+
+    public GameObject[] PhysicColliders;
+    public GameObject[] MessageColliders;
     
     public void GotRealMonkDiary1(bool _is)
     {
         CanGetOutOfMonkRoom = _is;
+        if (CanGetOutOfMonkRoom)
+        {
+            for(int i = 0; i < PhysicColliders.Length; i++)
+            {
+                PhysicColliders[i].SetActive(false);
+            }
+            for (int i = 0; i < MessageColliders.Length; i++)
+            {
+                MessageColliders[i].SetActive(false);
+            }
+        }
     }
 
     public void ActiveChildMemo8()
@@ -31,6 +58,8 @@ public class StoryFlow : MonoBehaviour
     public void SetCanGetIntoBasement(bool _is)
     {
         CanGetIntoBasement = _is;
+        PondToBase.instance.OpenBasement();
+        PondToBase.instance.OpenCollider();
     }
 
 
