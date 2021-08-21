@@ -9,5 +9,6 @@ public class GeneralAquire : ItemAcquire
     {
             Debug.Log("G¸¦´­·¶´Ù");
             Inventory.instance.GetAnItem(getItemID);
+            Destroy(this.gameObject);
     }
 }
