@@ -11,6 +11,16 @@ public class OrderManager : MonoBehaviour
 
     public GameObject bookshelf;
 
+    public void setCanMove()
+    {
+        thePlayer.notMove = true;
+    }
+
+    public void Move()
+    {
+        thePlayer.notMove = false;
+    }
+    //setCanMove, Move 함수 만들었습니다
     void Start()
     {
         thePlayer = FindObjectOfType<MovingObject>();
