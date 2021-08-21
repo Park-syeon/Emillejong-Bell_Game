@@ -36,21 +36,23 @@ public class OrderManager : MonoBehaviour
         {
             if (theInventory.getActivated())
             {
-                //thePlayer.setCanMove(false);  //여긴 캐릭터 못움직이게
+                thePlayer.notMove = true;
             }
             else if (theBookshelf.getActivated())
             {
                 theInventory.setActivated(false);
-                //theCamera.transform.position = bookshelf.transform.position; ㅜㅜ이거 안되네여
+                CameraManager.instance.setStop(true);
+                theCamera.transform.position = bookshelf.transform.position;
                 Debug.Log("이동함");
                 //SYeon 여기 카메라 bookshelf 있는데로 이동이요!!
-                //thePlayer.setCanMove(false);  //여긴 캐릭터 못움직이게
+                thePlayer.notMove = true;
 
             }
             else
             {
-                //thePlayer.setCanMove(true);
+                thePlayer.notMove = false;
             }
+
             if (theBookshelf.getActivated())
             {
                 theInventory.setStopKeyInput(true);
@@ -59,8 +61,7 @@ public class OrderManager : MonoBehaviour
             {
                 theInventory.setStopKeyInput(false);
                 Debug.Log("다시 돌아옴");
-                //theCamera.transform.position = thePlayer.transform.position; ㅜㅜ이거 안되네여
-                //SYeon 여기 카메라 다시 캐릭터 있는데로 이동이요!!
+                CameraManager.instance.setStop(false);
             }
         }
 

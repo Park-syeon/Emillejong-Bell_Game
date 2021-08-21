@@ -17,10 +17,24 @@ public class StoryFlow : MonoBehaviour
     private bool CanGetOutOfMonkRoom = false;
     public GameObject ChildMemo8;
     private bool CanGetIntoBasement = false;
+
+    public GameObject[] PhysicColliders;
+    public GameObject[] MessageColliders;
     
     public void GotRealMonkDiary1(bool _is)
     {
         CanGetOutOfMonkRoom = _is;
+        if (CanGetOutOfMonkRoom)
+        {
+            for(int i = 0; i < PhysicColliders.Length; i++)
+            {
+                PhysicColliders[i].SetActive(false);
+            }
+            for (int i = 0; i < MessageColliders.Length; i++)
+            {
+                MessageColliders[i].SetActive(false);
+            }
+        }
     }
 
     public void ActiveChildMemo8()
@@ -31,6 +45,8 @@ public class StoryFlow : MonoBehaviour
     public void SetCanGetIntoBasement(bool _is)
     {
         CanGetIntoBasement = _is;
+        PondToBase.instance.OpenBasement();
+        PondToBase.instance.OpenCollider();
     }
 
 
