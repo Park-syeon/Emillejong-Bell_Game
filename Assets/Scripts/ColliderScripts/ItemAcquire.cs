@@ -10,11 +10,11 @@ public class ItemAcquire : MonoBehaviour
 
     private void Awake()
     {
-        GIcon = GameObject.Find("GIcon");
+        GIcon = GameObject.Find("GIconParent").transform.Find("GIcon").gameObject;
     }
     private void Start()
     {
-        GIcon.SetActive(false);
+        GIcon.SetActive(true);
         IsTriggerActivated = false;
     }
 

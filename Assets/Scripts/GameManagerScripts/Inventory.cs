@@ -92,12 +92,15 @@ public class Inventory : MonoBehaviour
         tabActivated = false;
         itemActivated = false;
         clearEmptySlot();
-/*  //인벤토리에 데이터베이스에 있는 모든 아이템 집어넣기
-        for(int i = 0; i < DatabaseManager.instance.itemList.Count; i++)
-        {
-            InventoryItemList.Add(DatabaseManager.instance.itemList[i]);
-        }
-*/
+        /*  //인벤토리에 데이터베이스에 있는 모든 아이템 집어넣기
+                for(int i = 0; i < DatabaseManager.instance.itemList.Count; i++)
+                {
+                    InventoryItemList.Add(DatabaseManager.instance.itemList[i]);
+                }
+        
+        instance.GetAnItem(80001);
+        instance.GetAnItem(80002);
+        */
     }
     public void RemoveSlot()
     {
@@ -422,7 +425,8 @@ public class Inventory : MonoBehaviour
                         Debug.Log("dkdkdkkd");
                         itemActivated = false;
                         Debug.Log("여기까진 됐는데 말이죠");
-                        InventoryTabList[selectedItem].useItem();
+                        if(selectedItem < InventoryItemList.Count)
+                            InventoryTabList[selectedItem].useItem();
                         //go.SetActive(false);
                     }
                     else { }

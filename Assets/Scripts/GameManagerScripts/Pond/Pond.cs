@@ -6,10 +6,26 @@ public class Pond : MonoBehaviour
 {
     public static Pond instance;
 
+    #region ½Ì±ÛÅæ
+    private void Awake()    //½Ì±ÛÅæ!!
+    {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+    }
+    #endregion
+
     private bool activated;
     private bool circleDone;
 
-    private int[] WalkCheck = new int[4] { 0, 0, 0, 0 }; //Top, right, bottom, left ¼ø
+    public int[] WalkCheck = new int[4] { 0, 0, 0, 0 }; //Top, right, bottom, left ¼ø
     // Start is called before the first frame update
 
     // getsetÇÔ¼ö
@@ -71,6 +87,11 @@ public class Pond : MonoBehaviour
         activated = true;
         circleDone = false;
         instance = this;
+        for (int i = 0; i < 4; i++)
+        {
+            WalkCheck[i] = 0;
+        }
+
     }
 
     // Update is called once per frame

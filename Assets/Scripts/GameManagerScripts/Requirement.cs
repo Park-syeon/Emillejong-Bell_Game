@@ -24,9 +24,11 @@ public class Requirement : MonoBehaviour
 
     private int[] EmilleRoom = new int[3] { 9, 9, 9 };    //0이면 해제된거, 0이 아니면 잠긴거    //에밀레방 들어갈 수 있는지
     private int[] Basement = new int[2] { 9, 9 }; //0이면 해제된거, 0이 아니면 잠긴거
+    private bool isBasementOpened;
     private bool HalfKeyAble = false;   //연못에서 다섯바퀴 돌아서 반쪽자리 키 사용할 수 있는지
     private bool IsCandleOn = false;    //스님방에 양초가 켜져있는지//그래서 스님의일기장1,2를 사용할 ㅜㅅ 있는지
     private bool IsRealEmille = false;  //이거 왜 있는지 모르겠음
+    private bool IsEmilleRoomOpened = false;
 
     public bool GetIsCandleOn()
     {
@@ -36,17 +38,17 @@ public class Requirement : MonoBehaviour
     {
         return IsRealEmille;
     }
-    public bool IsBasementOpened()
+    public bool getIsBasementOpened()
     {
-        int i = Basement[0] + Basement[1];
-        if (i == 0)
-            return true;
-        else
-            return false;
+        return isBasementOpened;
     }
     public bool getHalfKeyAble()
     {
         return HalfKeyAble;
+    }
+    public bool getEmilleRoomOpen()
+    {
+        return IsEmilleRoomOpened;
     }
     public void EmilleRoomUnlock(int _itemID)
     {
@@ -55,14 +57,18 @@ public class Requirement : MonoBehaviour
             case Constants.key34:
                 EmilleRoom[0] = 0;
                 break;
-            case 90065:
+            case Constants.key65:
                 EmilleRoom[1] = 0;
                 break;
-            case 90077:
+            case Constants.key77:
                 EmilleRoom[2] = 0;
                 break;
             default:
                 break;
+        }
+        if(EmilleRoom[0]+EmilleRoom[1]+EmilleRoom[2] == 0)
+        {
+            IsEmilleRoomOpened = true;
         }
     }
     public void BasementUnlock(int _itemID)
@@ -71,11 +77,13 @@ public class Requirement : MonoBehaviour
         {
             case Constants.half_key1:
                 Basement[0] = 0;
-                return;
+                break;
             case Constants.half_key2:
                 Basement[1] = 0;
-                return;
+                break;
         }
+        if (Basement[0] + Basement[1] == 0)
+            isBasementOpened = true;
     }
     public void HalfKeyUseActivate(bool _is)
     {
