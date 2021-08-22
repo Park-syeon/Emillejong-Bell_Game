@@ -14,6 +14,7 @@ public class PondBottom : MonoBehaviour
         {
             Pond.instance.setWalkCheckClear();
         }
+        Debug.Log(Pond.instance.WalkCheck[0].ToString());
     }
     protected void OnTriggerExit2D(Collider2D collision)
     {
