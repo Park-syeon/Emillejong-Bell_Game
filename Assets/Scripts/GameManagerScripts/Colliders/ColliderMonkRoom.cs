@@ -24,13 +24,13 @@ public class ColliderMonkRoom :MonoBehaviour
 
     public void transferMapEvent(string name)
     {
-        if(name == mapname)
+        if (name == mapname)
         {
-            this.gameObject.SetActive(true);
+            this.transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
-            this.gameObject.SetActive(false);
+            this.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 }

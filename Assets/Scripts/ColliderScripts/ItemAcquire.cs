@@ -14,7 +14,7 @@ public class ItemAcquire : MonoBehaviour
     }
     private void Start()
     {
-        GIcon.SetActive(true);
+        GIcon.SetActive(false);
         IsTriggerActivated = false;
     }
 

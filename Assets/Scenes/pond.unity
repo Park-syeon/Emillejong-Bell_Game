@@ -1383,7 +1383,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185657378}
-  - component: {fileID: 185657379}
   m_Layer: 0
   m_Name: "\uC0C1\uD638\uC791\uC6A9(col)"
   m_TagString: Untagged
@@ -1399,27 +1398,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185657377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.24, y: -59.77, z: 0}
+  m_LocalPosition: {x: 77.39328, y: -18.394958, z: 11.667911}
   m_LocalScale: {x: 1.525, y: 1.525, z: 1}
   m_Children:
   - {fileID: 509847141}
   - {fileID: 623058243}
   - {fileID: 1038849659}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1606400879}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &185657379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185657377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9075376f4ff8ecf479afa0cb8e40e18b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &217675225
 GameObject:
   m_ObjectHideFlags: 0
@@ -25846,6 +25833,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dcdd90b268ee04ea0722651ae1b68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1606400877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606400879}
+  - component: {fileID: 1606400878}
+  m_Layer: 0
+  m_Name: colParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1606400878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606400877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9075376f4ff8ecf479afa0cb8e40e18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapname: pond
+--- !u!4 &1606400879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606400877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.153284, y: -41.375042, z: -11.667911}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 185657378}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670116413
 GameObject:
   m_ObjectHideFlags: 0
