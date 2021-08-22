@@ -1729,6 +1729,7 @@ GameObject:
   - component: {fileID: 574385753}
   - component: {fileID: 574385750}
   - component: {fileID: 574385757}
+  - component: {fileID: 574385758}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1859,6 +1860,24 @@ MonoBehaviour:
   MessageColliders:
   - {fileID: 859089757}
   - {fileID: 1799006733}
+--- !u!114 &574385758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574385749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fb78f5da0083b41bcbfe0e80bf9c68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temple: temple
+  library: library
+  MonkRoom: MonkRoom
+  pond: pond
+  EmilleRoom: "\uC885 \uC788\uB294 \uACF3"
+  basement: "\uC9C0\uD558\uC2E4"
 --- !u!1 &606644150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7326233704480754489, guid: 06bf51b647c4f9f40a914df34b7d6a2a, type: 3}
@@ -56695,6 +56714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0c88a437c81de4c8115b7caf2a86a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapname: temple
 --- !u!1001 &1095754588
 PrefabInstance:
   m_ObjectHideFlags: 0

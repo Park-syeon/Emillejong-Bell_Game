@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColliderEmilleRoom : MonoBehaviour
 {
+    public string mapname = "¡æ ¿÷¥¬ πÊ";
     public static ColliderEmilleRoom instance;
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
@@ -20,4 +21,16 @@ public class ColliderEmilleRoom : MonoBehaviour
         }
     }
     #endregion
+
+    public void transferMapEvent(string name)
+    {
+        if (name == mapname)
+        {
+            this.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }

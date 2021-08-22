@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColliderLibrary : MonoBehaviour
 {
+    public string mapname = "library";
     public static ColliderLibrary instance;
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
@@ -20,4 +21,16 @@ public class ColliderLibrary : MonoBehaviour
         }
     }
     #endregion
+
+    public void transferMapEvent(string name)
+    {
+        if (name == mapname)
+        {
+            this.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }
