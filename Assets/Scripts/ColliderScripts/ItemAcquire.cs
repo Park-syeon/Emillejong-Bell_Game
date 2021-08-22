@@ -34,6 +34,7 @@ public class ItemAcquire : MonoBehaviour
     {
         if (IsTriggerActivated)
         {
+            if(!Inventory.instance.getActivated())
             if (Input.GetKeyDown(KeyCode.G))
             {
                 Do();
