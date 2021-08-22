@@ -271,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 80004
+  A: {fileID: 0}
 --- !u!61 &7699509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2289,6 +2290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 20004
+  A: {fileID: 0}
 --- !u!61 &722505813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4147,6 +4149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 0
+  A: {fileID: 0}
 --- !u!61 &1372587628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9035,6 +9038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 30006
+  A: {fileID: 1290229205}
 --- !u!1 &1803195937
 GameObject:
   m_ObjectHideFlags: 0
@@ -9550,6 +9554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 11001
+  A: {fileID: 0}
 --- !u!61 &1915307277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9741,6 +9746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 20005
+  A: {fileID: 0}
 --- !u!61 &2008659507
 BoxCollider2D:
   m_ObjectHideFlags: 0
