@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColliderPond : MonoBehaviour
 {
+    public string mapname = "pond";
     public static ColliderPond instance;
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
@@ -20,4 +21,16 @@ public class ColliderPond : MonoBehaviour
         }
     }
     #endregion
+
+    public void transferMapEvent(string name)
+    {
+        if (name == mapname)
+        {
+            this.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            this.transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
 }

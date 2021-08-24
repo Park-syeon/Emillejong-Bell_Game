@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColliderTemple : MonoBehaviour
 {
+    public string mapname = "temple";
     public static ColliderTemple instance;
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
@@ -20,4 +21,16 @@ public class ColliderTemple : MonoBehaviour
         }
     }
     #endregion
+
+    public void transferMapEvent(string name)
+    {
+        if (name == mapname)
+        {
+            this.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            this.transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
 }

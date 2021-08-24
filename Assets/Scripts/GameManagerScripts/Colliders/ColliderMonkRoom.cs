@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColliderMonkRoom :MonoBehaviour
 {
+    public string mapname = "MonkRoom";
     public static ColliderMonkRoom instance;
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
@@ -20,4 +21,16 @@ public class ColliderMonkRoom :MonoBehaviour
         }
     }
     #endregion
+
+    public void transferMapEvent(string name)
+    {
+        if (name == mapname)
+        {
+            this.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            this.transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
 }

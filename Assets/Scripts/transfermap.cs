@@ -19,6 +19,8 @@ public class transfermap : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             thePlayer.currentMapName = transferMapName;//플레이어의 현재 맵이 이동하고자하는 맵이 됨
+            ColliderActiveManager.instance.setCurMap(transferMapName);
+            ColliderActiveManager.instance.move(transferMapName);
             SceneManager.LoadScene(transferMapName);//이동하고자 하는 맵을 로드함.
         }
 
