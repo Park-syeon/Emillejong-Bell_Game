@@ -252,6 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90061
+  A: {fileID: 0}
 --- !u!1 &21787453
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90056
+  A: {fileID: 0}
 --- !u!1 &71573964
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 30004
+  A: {fileID: 0}
 --- !u!61 &179017283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -842,6 +845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90012
+  A: {fileID: 0}
 --- !u!1 &222442291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +1852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 20002
+  A: {fileID: 0}
 --- !u!61 &364294230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1946,6 +1951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90065
+  A: {fileID: 0}
 --- !u!1 &536240722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,6 +2024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90077
+  A: {fileID: 0}
 --- !u!1 &549553393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,6 +2317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90081
+  A: {fileID: 0}
 --- !u!1 &756271637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,6 +3206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 20003
+  A: {fileID: 0}
 --- !u!61 &850773342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3424,6 +3433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90055
+  A: {fileID: 0}
 --- !u!1 &1067195488
 GameObject:
   m_ObjectHideFlags: 0
@@ -3496,6 +3506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90095
+  A: {fileID: 0}
 --- !u!1 &1120796872
 GameObject:
   m_ObjectHideFlags: 0
@@ -5800,6 +5811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90005
+  A: {fileID: 0}
 --- !u!1 &1332330493
 GameObject:
   m_ObjectHideFlags: 0
@@ -5872,6 +5884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90001
+  A: {fileID: 0}
 --- !u!1 &1366665836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5944,6 +5957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90034
+  A: {fileID: 0}
 --- !u!1 &1380374256
 GameObject:
   m_ObjectHideFlags: 0
@@ -6098,6 +6112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90074
+  A: {fileID: 0}
 --- !u!1 &1417870224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6170,6 +6185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90024
+  A: {fileID: 0}
 --- !u!1 &1444175829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7371,6 +7387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 20001
+  A: {fileID: 0}
 --- !u!61 &1596264677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7469,6 +7486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90088
+  A: {fileID: 0}
 --- !u!1 &1702688848
 GameObject:
   m_ObjectHideFlags: 0
@@ -7541,6 +7559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90002
+  A: {fileID: 0}
 --- !u!1 &1748427787
 GameObject:
   m_ObjectHideFlags: 0
@@ -12514,6 +12533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90059
+  A: {fileID: 0}
 --- !u!1 &1848741085
 GameObject:
   m_ObjectHideFlags: 0
@@ -12560,6 +12580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 30005
+  A: {fileID: 0}
 --- !u!61 &1848741088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12764,6 +12785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90083
+  A: {fileID: 0}
 --- !u!1 &2034356050
 GameObject:
   m_ObjectHideFlags: 0
@@ -12836,6 +12858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90100
+  A: {fileID: 0}
 --- !u!1 &2067152257
 GameObject:
   m_ObjectHideFlags: 0
@@ -12990,6 +13013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectitemID: 0
   getItemID: 90092
+  A: {fileID: 0}
 --- !u!1 &2111171266
 GameObject:
   m_ObjectHideFlags: 0
