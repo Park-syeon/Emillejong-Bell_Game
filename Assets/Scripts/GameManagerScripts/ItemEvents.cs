@@ -21,6 +21,19 @@ public class ItemEvents : MonoBehaviour
 
 
     private int itemID;
+    AudioManager theAudio;
+    public string keySound;
+    private int soundNum= 0;
+
+    public Dialogue dialogue;
+    private DialogueManager theDM;
+
+    private void Start()
+    {
+        theDM = FindObjectOfType<DialogueManager>();
+        theAudio = FindObjectOfType<AudioManager>();
+    }
+
     public void playItemEvent(int _itemID)
     {
         itemID = _itemID;
@@ -65,6 +78,9 @@ public class ItemEvents : MonoBehaviour
     private void ItemRock()
     {
         Requirement.instance.Letcandleon(true);
+        dialogue.sentences = new string[] { "양초에 불이 켜졌다." };
+        theDM.ShowDialogue(dialogue);
+
     }
     private void monkdiary2()
     {
@@ -78,6 +94,8 @@ public class ItemEvents : MonoBehaviour
     {
         if (Requirement.instance.GetIsCandleOn())
         {
+            dialogue.sentences = new string[] { "양초에 비추니 스님의 일기장에서 글씨가 보이기 시작한다." };
+            theDM.ShowDialogue(dialogue);
             Inventory.instance.GetAnItem(Constants.real_monkdiary1_ID);
             Inventory.instance.RemoveAnItem(itemID);
             StoryFlow.instance.GotRealMonkDiary1(true);
@@ -91,9 +109,14 @@ public class ItemEvents : MonoBehaviour
     private void key346577()
     {
         Requirement.instance.EmilleRoomUnlock(itemID);
+        soundNum = theAudio.Find(keySound);
+        theAudio.sounds[soundNum].Play();
+
         if (Requirement.instance.getEmilleRoomOpen())
         {
             ToEmilleRoom.instance.OpenCollider();
+            dialogue.sentences = new string[] { "문이 열렸다." };
+            theDM.ShowDialogue(dialogue);
         }
         Inventory.instance.RemoveAnItem(itemID);
 
@@ -106,7 +129,14 @@ public class ItemEvents : MonoBehaviour
     private void halfKey()
     {
         Requirement.instance.BasementUnlock(itemID);
-        StoryFlow.instance.SetCanGetIntoBasement(Requirement.instance.getIsBasementOpened());
+        soundNum = theAudio.Find(keySound);
+        theAudio.sounds[soundNum].Play();
+        if (Requirement.instance.getIsBasementOpened())
+        {
+            StoryFlow.instance.SetCanGetIntoBasement(true);
+            dialogue.sentences = new string[] { "물이 빠진 연못 한 가운데 문이 보인다." };
+            theDM.ShowDialogue(dialogue);
+        }
         Inventory.instance.RemoveAnItem(itemID);
     }
 }

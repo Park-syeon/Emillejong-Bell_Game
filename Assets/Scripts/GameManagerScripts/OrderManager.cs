@@ -43,26 +43,34 @@ public class OrderManager : MonoBehaviour
         theCamera = FindObjectOfType<Camera>();
     }
 
+    public void moveOrNot()
+    {
+        if (DialogueManager.instance.talking)
+        {
+            theInventory.setActivated(false);
+            theInventory.setStopKeyInput(true);
+            thePlayer.notMove = true;
+        }
+
+        else if (theInventory.getActivated())
+        {
+            thePlayer.notMove = true;
+        }
+
+        else
+        {
+            theInventory.setStopKeyInput(false);
+            thePlayer.notMove = false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.G) || Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.KeypadEnter))
         {
-            if (theInventory.getActivated())
-            {
-                thePlayer.notMove = true;
-            }
-            else if (theInventory.getActivated())
-            {
-                thePlayer.notMove = false;
-            }
-
-            
-            else
-            {
-                thePlayer.notMove = false;
-            }
-
+            if (thePlayer.currentMapName != "MonkRoom")
+                moveOrNot();
         }
 
 
