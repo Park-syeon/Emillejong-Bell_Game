@@ -29,6 +29,7 @@ public class StoryFlow : MonoBehaviour
     //지하실 열쇠를 모두 썼는지는 Requirement.instance.IsBasementOpened();
     private bool CanGetOutOfMonkRoom = false;
     public GameObject ChildMemo8;
+    public GameObject endingPoint;
     private bool CanGetIntoBasement = false;
 
     public GameObject[] PhysicColliders;
@@ -54,6 +55,10 @@ public class StoryFlow : MonoBehaviour
     {
         ChildMemo8.SetActive(true);
     }
+    public void ActiveEndingPoint()
+    {
+        endingPoint.SetActive(true);
+    }
 
     public void SetCanGetIntoBasement(bool _is)
     {
@@ -74,6 +79,7 @@ public class StoryFlow : MonoBehaviour
     void Start()
     {
         ChildMemo8.SetActive(false);
+        endingPoint.SetActive(false);
     }
 
     // Update is called once per frame
@@ -81,11 +87,11 @@ public class StoryFlow : MonoBehaviour
     {
         if (!CanGetOutOfMonkRoom)
         {
-            //스님방에서 나갈 수 없음 또는 스님방만 들어갈 수 있음?
+            //스님방에서 나갈 수 없음 또는 스님방만 들어갈 수 있음?   //이것도 어디파일인진 모르겠는데 스님방만 들어갈 수 있게 함
         }
         if (CanGetIntoBasement)
         {
-            //지하실 들어갈 수 있음
+            //지하실 들어갈 수 있음 //pondtobasement 파일에서 막는 콜라이더 없애고 지하실로 가는  tranfermap 초가해줌
         }
     }
 }

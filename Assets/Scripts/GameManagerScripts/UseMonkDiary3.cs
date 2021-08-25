@@ -72,7 +72,7 @@ public class UseMonkDiary3 : MonoBehaviour
 
             Inventory.instance.setActivated(false);
 
-            Debug.Log("해독된 스님의 일기장 #3을 얻었다.");
+//            Debug.Log("해독된 스님의 일기장 #3을 얻었다.");
         }
         else
         {

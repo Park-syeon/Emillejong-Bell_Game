@@ -170,6 +170,7 @@ public class UseMonkDiary4 : MonoBehaviour
         Inventory.instance.GetAnItem(Constants.real_monkdiary4_ID);
         Inventory.instance.RemoveAnItem(Constants.previous_monkdiary4_ID);
         StoryFlow.instance.ActiveChildMemo8();
+        StoryFlow.instance.ActiveEndingPoint();
         Inventory.instance.setActivated(false);
     }
     private void ResetDiary4()

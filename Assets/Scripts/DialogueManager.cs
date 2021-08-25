@@ -49,9 +49,11 @@ public class DialogueManager : MonoBehaviour
     //대화창을 띄우는 역할을 하는 함수
     public void ShowDialogue(Dialogue dialogue)
     {
+        text.text = "";
         StopAllCoroutines();
         talking = true;
-        for(int i = 0; i< dialogue.sentences.Length; i++)
+        OrderManager.instance.moveOrNot();
+        for (int i = 0; i< dialogue.sentences.Length; i++)
         {
             listSentences.Add(dialogue.sentences[i]);
             listSprites.Add(dialogue.sprites[i]);

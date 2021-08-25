@@ -6,6 +6,9 @@ public class Pond : MonoBehaviour
 {
     public static Pond instance;
 
+    public Dialogue dialogue;
+    private DialogueManager theDM;
+
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
     {
@@ -91,6 +94,8 @@ public class Pond : MonoBehaviour
         {
             WalkCheck[i] = 0;
         }
+        theDM = FindObjectOfType<DialogueManager>();
+
 
     }
 
@@ -103,7 +108,8 @@ public class Pond : MonoBehaviour
             if (circleDone)
             {
                 Requirement.instance.HalfKeyUseActivate(true);
-                Debug.Log("ø≠ºË±∏∏€¿Ã ∫∏¿Œ¥Ÿ.");
+                dialogue.sentences = new string[] { "ø¨∏¯ ø∑ ºÆªÛø°º≠ ø≠ºË±∏∏€¿Ã ∫∏¿Œ¥Ÿ." };
+                theDM.ShowDialogue(dialogue);
                 activated = false;
             }
         }

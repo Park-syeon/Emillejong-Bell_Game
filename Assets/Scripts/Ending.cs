@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ending : MonoBehaviour
 {
     private bool activated = false;
-
+    public Dialogue dialogue;
+    private DialogueManager theDM;
     public void setActivated(bool _is)
     {
         activated = _is;
@@ -21,14 +23,31 @@ public class Ending : MonoBehaviour
 
     private void Start()
     {
-        this.gameObject.SetActive(false);
+        activated = false;
+        theDM = FindObjectOfType<DialogueManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        theDM.ShowDialogue(dialogue);
+        activated = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        activated = false;
+    }
+    private void Update()
+    {
         if (activated)
         {
-
+            if (!theDM.talking)
+            {
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    Debug.Log("»Ï»Ï");
+                    SceneManager.LoadScene("Ending");
+                }
+            }
         }
     }
 }
