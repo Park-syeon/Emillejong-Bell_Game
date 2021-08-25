@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PondToBase : MonoBehaviour
+public class ToEmilleRoom : MonoBehaviour
 {
-    static public PondToBase instance;
+    static public ToEmilleRoom instance;
 
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
@@ -22,22 +22,17 @@ public class PondToBase : MonoBehaviour
     }
     #endregion
 
-    public GameObject PondCollider;
-    public GameObject ToBaseCollider;
+    public GameObject physicCollider;
 
     public void OpenCollider()
     {
-        PondCollider.SetActive(false);
-    }
-    public void OpenBasement()
-    {
-        ToBaseCollider.SetActive(true);
+        physicCollider.SetActive(false);
     }
 
     private void Start()
     {
         instance = this;
-        PondCollider.SetActive(true);
-        ToBaseCollider.SetActive(false);
+        physicCollider.SetActive(true);
+
     }
 }

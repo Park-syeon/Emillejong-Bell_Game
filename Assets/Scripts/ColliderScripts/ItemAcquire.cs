@@ -10,7 +10,7 @@ public class ItemAcquire : MonoBehaviour
 
     private void Awake()
     {
-        GIcon = GameObject.Find("GIcon");
+        GIcon = GameObject.Find("GIconParent").transform.Find("GIcon").gameObject;
     }
     private void Start()
     {
@@ -34,6 +34,7 @@ public class ItemAcquire : MonoBehaviour
     {
         if (IsTriggerActivated)
         {
+            if(!Inventory.instance.getActivated())
             if (Input.GetKeyDown(KeyCode.G))
             {
                 Do();

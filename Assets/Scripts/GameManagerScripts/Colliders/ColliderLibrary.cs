@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HalfKey : MonoBehaviour
+public class ColliderLibrary : MonoBehaviour
 {
-    public static HalfKey instance;
-
+    public string mapname = "library";
+    public static ColliderLibrary instance;
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
     {
@@ -22,19 +22,15 @@ public class HalfKey : MonoBehaviour
     }
     #endregion
 
-    public GameObject HalfKey1;
-    public GameObject HalfKey2;
-
-    private void Start()
+    public void transferMapEvent(string name)
     {
-        instance = this;
-        HalfKey1.SetActive(false);
-        HalfKey2.SetActive(false);
-    }
-
-    public void SetActive()
-    {
-        HalfKey1.SetActive(true);
-        HalfKey2.SetActive(true);
+        if (name == mapname)
+        {
+            this.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            this.transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 }

@@ -91,7 +91,12 @@ public class ItemEvents : MonoBehaviour
     private void key346577()
     {
         Requirement.instance.EmilleRoomUnlock(itemID);
+        if (Requirement.instance.getEmilleRoomOpen())
+        {
+            ToEmilleRoom.instance.OpenCollider();
+        }
         Inventory.instance.RemoveAnItem(itemID);
+
     }
     private void realEmille()
     {
@@ -101,7 +106,7 @@ public class ItemEvents : MonoBehaviour
     private void halfKey()
     {
         Requirement.instance.BasementUnlock(itemID);
-        StoryFlow.instance.SetCanGetIntoBasement(Requirement.instance.IsBasementOpened());
+        StoryFlow.instance.SetCanGetIntoBasement(Requirement.instance.getIsBasementOpened());
         Inventory.instance.RemoveAnItem(itemID);
     }
 }

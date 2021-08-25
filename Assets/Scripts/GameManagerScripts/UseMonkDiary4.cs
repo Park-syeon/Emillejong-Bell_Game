@@ -24,6 +24,7 @@ public class UseMonkDiary4 : MonoBehaviour
     #endregion
 
     private bool activated;
+    private bool Gprevent;
 
     public GameObject diary4;
     public GameObject[] ob = new GameObject[4];
@@ -59,6 +60,8 @@ public class UseMonkDiary4 : MonoBehaviour
         }
         diary4.SetActive(false);
 
+        Gprevent = false;
+
     }
 
     // Update is called once per frame
@@ -66,67 +69,76 @@ public class UseMonkDiary4 : MonoBehaviour
     {
         if (activated)
         {
-
-            diary4.gameObject.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Gprevent)
             {
-                for(int i = cur + 1; i < 4; i++)
+
+                diary4.gameObject.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
-                    if (choosed[i] != 0)
+                    for (int i = cur + 1; i < 4; i++)
                     {
-                        cur = i;
-                        break;
+                        if (choosed[i] != 0)
+                        {
+                            cur = i;
+                            break;
+                        }
                     }
                 }
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                for (int i = cur - 1; i >= 0; i--)
+                else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    if (choosed[i] != 0)
+                    for (int i = cur - 1; i >= 0; i--)
                     {
-                        cur = i;
-                        break;
+                        if (choosed[i] != 0)
+                        {
+                            cur = i;
+                            break;
+                        }
                     }
                 }
-            }
-            else if(Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Return))
-            {
-                if(choosed[cur] == 0)
+                else if (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Return))
                 {
-                    Debug.LogError("없어야하는 선택지다.");
+                    if (choosed[cur] == 0)
+                    {
+                        Debug.LogError("없어야하는 선택지다.");
+                    }
+                    else
+                    {
+                        choosed[cur] = 0;
+                        ob[cur].gameObject.SetActive(false);
+                        Useranswer[curanswerNum] = cur + 1;
+                        curanswerNum++;
+
+                    }
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (choosed[i] != 0)
+                        {
+                            cur = i;
+                            break;
+                        }
+                    }
                 }
                 else
                 {
-                    choosed[cur] = 0;
-                    ob[cur].gameObject.SetActive(false);
-                    Useranswer[curanswerNum] = cur + 1;
-                    curanswerNum++;
 
                 }
-                for (int i = 0; i < 4; i++)
+                selectedIcon();
+
+                //4번까지 모두 선택했을 시
+                if (curanswerNum == 4)
                 {
-                    if (choosed[i] != 0)
-                    {
-                        cur = i;
-                        break;
-                    }
+                    Debug.Log("끝난건지아닌건지");
+                    checkAnswer();
+                    ResetDiary4();
+                    Inventory.instance.SetpreventExec2(true);
+                    Gprevent = false;
                 }
             }
-            else
-            {
 
-            }
-            selectedIcon();
-
-            //4번까지 모두 선택했을 시
-            if (curanswerNum == 4)
+            if (Input.GetKeyUp(KeyCode.G))
             {
-                Debug.Log("끝난건지아닌건지");
-                checkAnswer();
-                ResetDiary4();
-                Inventory.instance.SetpreventExec2(true);
+                Gprevent = true;
             }
 
         }
