@@ -25965,6 +25965,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dbd28055f2dd964cbcae92a3772dfa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - 
+    sprites:
+    - {fileID: 0}
+    dialogueWindows:
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
   WalkCheck: 00000000000000000000000000000000
 --- !u!4 &1779452847
 Transform:
