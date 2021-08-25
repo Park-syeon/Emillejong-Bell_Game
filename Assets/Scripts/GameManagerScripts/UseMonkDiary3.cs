@@ -47,7 +47,12 @@ public class UseMonkDiary3 : MonoBehaviour
                 _11003_inputField.gameObject.SetActive(false);
                 activated = false;
             }
-           
+            if (!Inventory.instance.getActivated())
+            {
+                Inventory.instance.SetpreventExec2(true);
+                _11003_inputField.gameObject.SetActive(false);
+                activated = false;
+            }
             
         }
     }

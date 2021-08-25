@@ -20,6 +20,10 @@ public class MovingObject : MonoBehaviour
 
     private bool canMove = true;
     private Animator animator;
+
+    public string walkSound;
+    private int walk = 0;
+    private AudioManager theaudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,8 @@ public class MovingObject : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        theaudio = FindObjectOfType<AudioManager>();
+        walk = theaudio.Find(walkSound);
     }
     IEnumerator MoveCoroutine()
     {
@@ -78,6 +84,15 @@ public class MovingObject : MonoBehaviour
         canMove = true;
     }
 
+    IEnumerator WalkSound()
+    {
+        while (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0 && !notMove)
+        {
+            theaudio.sounds[walk].Play();
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -86,8 +101,10 @@ public class MovingObject : MonoBehaviour
         {
             if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
+                StopAllCoroutines();
                 canMove = false;
                 StartCoroutine(MoveCoroutine());
+                StartCoroutine(WalkSound());
             }
         }
 

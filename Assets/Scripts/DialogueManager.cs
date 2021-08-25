@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
     //대화창을 띄우는 역할을 하는 함수
     public void ShowDialogue(Dialogue dialogue)
     {
+        StopAllCoroutines();
         talking = true;
         for(int i = 0; i< dialogue.sentences.Length; i++)
         {
@@ -133,6 +134,14 @@ public class DialogueManager : MonoBehaviour
                 {
                     StopAllCoroutines();
                    ExitDialogue();
+                    if(MovingObject.instance.currentMapName == "MonkRoom")
+                    {
+                        OrderManagerWithBS.instance.move();
+                    }
+                    else
+                    {
+                        OrderManager.instance.moveOrNot();
+                    }
                 }
                 else
                 {
@@ -140,7 +149,10 @@ public class DialogueManager : MonoBehaviour
                     StartCoroutine(StartDialogueCoroutine());
                 }
             }
+            skipB = false;
+
         }
-        skipB = false;
+//        skipB = false;
+
     }
 }

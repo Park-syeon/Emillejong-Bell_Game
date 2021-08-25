@@ -59,6 +59,14 @@ public class Inventory : MonoBehaviour
     private bool preventExec2;
 
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
+    private AudioManager theAudio;
+    public string inventorySound;
+    private int inventory;
+    public string itemSound;
+    private int item;
+
+    private DialogueManager theDM;
+    public Dialogue dialogue;
 
     //getset함수
     public bool getActivated()
@@ -101,6 +109,11 @@ public class Inventory : MonoBehaviour
         instance.GetAnItem(80001);
         instance.GetAnItem(80002);
         */
+
+        theAudio = FindObjectOfType<AudioManager>();
+        inventory = theAudio.Find(inventorySound);
+        item = theAudio.Find(itemSound);
+        theDM = FindObjectOfType<DialogueManager>();
     }
     public void RemoveSlot()
     {
@@ -255,8 +268,10 @@ public class Inventory : MonoBehaviour
             }
             if (_itemID == DatabaseManager.instance.itemList[i].itemID)
             {
+                theAudio.sounds[item].Play();
                 InventoryItemList.Add(DatabaseManager.instance.itemList[i]);
-                Debug.Log("아이템 " + DatabaseManager.instance.itemList[i].itemName + " 을 얻었다.");
+                dialogue.sentences = new string[] { "아이템 " + DatabaseManager.instance.itemList[i].itemName + " 을 얻었다." };
+                theDM.ShowDialogue(dialogue);
                 return;
             }
 
@@ -302,6 +317,7 @@ public class Inventory : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 activated = !activated;
+                theAudio.sounds[inventory].Play();
                 if (activated)
                 {
                     go.SetActive(true);

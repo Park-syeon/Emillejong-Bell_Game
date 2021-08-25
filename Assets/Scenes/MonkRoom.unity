@@ -997,13 +997,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2501544673391867868, guid: 9f71d2c5d392db048927496f7d416a5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6813225155252382852, guid: 9f71d2c5d392db048927496f7d416a5d, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6813225155252382852, guid: 9f71d2c5d392db048927496f7d416a5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 81.588615
+      value: 98.55
       objectReference: {fileID: 0}
     - target: {fileID: 6813225155252382852, guid: 9f71d2c5d392db048927496f7d416a5d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1044,6 +1048,10 @@ PrefabInstance:
     - target: {fileID: 6813225155252382853, guid: 9f71d2c5d392db048927496f7d416a5d, type: 3}
       propertyPath: m_Name
       value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475293273441384207, guid: 9f71d2c5d392db048927496f7d416a5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f71d2c5d392db048927496f7d416a5d, type: 3}
