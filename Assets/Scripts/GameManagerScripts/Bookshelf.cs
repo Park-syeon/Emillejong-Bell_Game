@@ -25,7 +25,8 @@ public class Bookshelf : MonoBehaviour
 
     public GameObject[] books;
     public GameObject selectedBookFrame;
-    public GameObject[] monkDiary2;
+    public GameObject[] monkDiary2_1;
+    public GameObject[] monkDiary2_2;
     public GameObject[] halfKey1;
 
 
@@ -68,14 +69,25 @@ public class Bookshelf : MonoBehaviour
 
     private void checkDiary2()
     {
+        bool check = true;
         for(int i = 0; i < books.Length; i++)
         {
-            if(books[i] != monkDiary2[i])
+            if(books[i] != monkDiary2_1[i])
             {
-                return;
+                check = false;
+                break;
             }
         }
-
+        if (!check)
+        {
+            for (int i = 0; i < books.Length; i++)
+            {
+                if (books[i] != monkDiary2_2[i])
+                {
+                    return;
+                }
+            }
+        }
         Inventory.instance.GetAnItem(Constants.previous_monkdiary2_ID);
     }
     private void checkHalfKey1()
