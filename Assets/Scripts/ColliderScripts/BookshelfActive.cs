@@ -17,6 +17,6 @@ public class BookshelfActive : ItemAcquire
     protected override void Do()
     {
         Bookshelf.instance.setActivated(true);
-        Debug.Log("G클릭함");
+//        Debug.Log("G클릭함");
     }
 }

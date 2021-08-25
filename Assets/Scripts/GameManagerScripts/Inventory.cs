@@ -260,9 +260,10 @@ public class Inventory : MonoBehaviour
         {
             for (int k = 0; k < InventoryItemList.Count; k++)
             {
-                if(InventoryItemList[k].itemID == _itemID)
+                if (InventoryItemList[k].itemID == _itemID)
                 {
-                    Debug.Log("이미 있는 아이템이다.");  //사실 나오면 뭔가 잘못된거다.
+                    dialogue.sentences = new string[] { "이미 있는 아이템이다." };  //사실 나오면 뭔가 잘못된거다.
+                    theDM.ShowDialogue(dialogue);
                     return;
                 }
             }

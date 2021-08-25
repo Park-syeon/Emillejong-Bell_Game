@@ -77,7 +77,6 @@ public class Bookshelf : MonoBehaviour
         }
 
         Inventory.instance.GetAnItem(Constants.previous_monkdiary2_ID);
-        Debug.Log("스님의 일기장 #2를 얻었다.");
     }
     private void checkHalfKey1()
     {
@@ -90,7 +89,6 @@ public class Bookshelf : MonoBehaviour
         }
 
         Inventory.instance.GetAnItem(Constants.half_key1);
-        Debug.Log("어디다 쓰는지 모를 반쪽짜리 열쇠를 얻었다.");
     }
 
     // Start is called before the first frame update
