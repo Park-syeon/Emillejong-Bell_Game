@@ -982,7 +982,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &1076602862
 RectTransform:
@@ -1251,9 +1251,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4717256048f3a4882a205d2c8392de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  king: {fileID: 635238602}
-  monk: {fileID: 945112584}
-  haengsu: {fileID: 239690620}
+  king:
+  - {fileID: 635238602}
+  - {fileID: 635238602}
+  - {fileID: 635238602}
+  monk:
+  - {fileID: 945112584}
+  - {fileID: 945112584}
+  - {fileID: 945112584}
+  haengsu:
+  - {fileID: 239690620}
+  - {fileID: 239690620}
+  - {fileID: 239690620}
+  endPoint: 0
+  kingA:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
+  kingB:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
+  kingC:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
+  monkA:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
+  monkB:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
+  monkC:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
+  haengsuA:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
+  haengsuB:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
+  haengsuC:
+    sentences: []
+    sprites: []
+    dialogueWindows: []
   ending: {fileID: 1076602861}
   black: {fileID: 1367487805}
 --- !u!4 &1616259278

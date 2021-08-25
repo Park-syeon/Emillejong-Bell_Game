@@ -21,8 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/library.unity
     guid: 036978d0e0d0caa4f9104b84df0d544e
   - enabled: 1
-    path: "Assets/Scenes/\uC808 \uC785\uAD6C.unity"
-    guid: 5617412efb7d0864e91af635805bb1a4
+    path: Assets/Scenes/Ending.unity
+    guid: 9b14ded8c93b5944f94dcee06877c579
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: "Assets/Scenes/\uC9C0\uD558\uC2E4.unity"
     guid: 50c303cd93aad6e4080406948db9b6ea

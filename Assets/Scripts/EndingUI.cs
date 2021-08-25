@@ -5,43 +5,125 @@ using UnityEngine.UI;
 
 public class EndingUI : MonoBehaviour
 {
-    public GameObject king;
-    public GameObject monk;
-    public GameObject haengsu;
+    public GameObject[] king = new GameObject[3];
+    public GameObject[] monk = new GameObject[3];
+    public GameObject[] haengsu = new GameObject[3];
+    public int endPoint = 0;
 
+    public Dialogue kingA;
+    public Dialogue kingB;
+    public Dialogue kingC;
+
+    public Dialogue monkA;
+    public Dialogue monkB;
+    public Dialogue monkC;
+
+    public Dialogue haengsuA;
+    public Dialogue haengsuB;
+    public Dialogue haengsuC;
+
+    private DialogueManager theDM;
     public Canvas ending;
 
     private bool ended;
    public void King()
     {
-        king.SetActive(true);
-        end();
+        switch (endPoint)
+        {
+            case 1:
+                king[0].SetActive(true);
+                end(kingA);
+                break;
+            case 2:
+                king[1].SetActive(true);
+                end(kingB);
+                break;
+            case 3:
+                king[2].SetActive(true);
+                end(kingC);
+                break;
+
+        }
     }
     
     public void Monk()
     {
-        monk.SetActive(true);
-        end();
-        
+        switch (endPoint)
+        {
+            case 1:
+                monk[0].SetActive(true);
+                end(monkA);
+                break;
+            case 2:
+                monk[1].SetActive(true);
+                end(monkB);
+                break;
+            case 3:
+                monk[2].SetActive(true);
+                end(monkC);
+                break;
+
+        }
+
     }
     public void HaengSu()
-    {
-        haengsu.SetActive(true);
-        end();
+    { 
+        switch (endPoint)
+        {
+            case 1:
+                haengsu[0].SetActive(true);
+                end(haengsuA);
+                break;
+            case 2:
+                haengsu[1].SetActive(true);
+                end(haengsuB);
+                break;
+            case 3:
+                haengsu[2].SetActive(true);
+                end(haengsuC);
+                break;
+
+        }
     }
 
     private void Start()
     {
         ended = false;
         black.SetActive(false);
-        king.SetActive(false);
-        monk.SetActive(false);
-        haengsu.SetActive(false);
+        king[0].SetActive(false);
+        king[1].SetActive(false);
+        king[2].SetActive(false);
+        monk[0].SetActive(false);
+        monk[1].SetActive(false);
+        monk[2].SetActive(false);
+        haengsu[0].SetActive(false);
+        haengsu[1].SetActive(false);
+        haengsu[2].SetActive(false);
         ending.gameObject.SetActive(true);
         stopkeyinput = true;
+        theDM = FindObjectOfType<DialogueManager>();
+
+        setEndPoint();
     }
 
-        public GameObject black;
+    private void setEndPoint()
+    {
+        /*
+        if (Inventory.instance.FindItem(Constants.basement_monkdiary))
+            endPoint = 3;
+        else if(Inventory.instance.FindItem(Constants.previous_realEmille) || Inventory.instance.FindItem(Constants.real_realEmille))
+        {
+            endPoint = 2;
+        }
+        else
+        {
+            endPoint = 1;
+        }
+        */
+        endPoint = 1;
+    }
+
+    public GameObject black;
     private bool stopkeyinput;
 
         IEnumerator RunFadeOut()
@@ -59,12 +141,13 @@ public class EndingUI : MonoBehaviour
             stopkeyinput = false;
             }
         }
-    private void end()
+    private void end(Dialogue _dialogue)
     {
         ended = true;
         ending.gameObject.SetActive(false);
         black.SetActive(true);
         StartCoroutine("RunFadeOut");
+        theDM.ShowDialogue(_dialogue);
     }
 
     private void Update()
