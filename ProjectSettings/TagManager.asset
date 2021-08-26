@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - AboveUI
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1344683889
+    locked: 0
+  - name: AboveUI
+    uniqueID: 3610867843
     locked: 0
