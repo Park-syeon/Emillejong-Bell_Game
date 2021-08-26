@@ -63,12 +63,12 @@ public class UseMonkDiary3 : MonoBehaviour
     {
         if (_11003_inputField.text == monkdiary3Code)
         {
-            Debug.Log("여기까지2");
+//            Debug.Log("여기까지2");
             Inventory.instance.GetAnItem(Constants.real_monkdiary3_ID);
             Inventory.instance.GetAnItem(Constants.previous_monkdiary4_ID);
-            Debug.Log("여기까지3");
+ //           Debug.Log("여기까지3");
             Inventory.instance.RemoveAnItem(Constants.previous_monkdiary3_ID); ;
-            Debug.Log("여기까지4");
+//            Debug.Log("여기까지4");
 
             Inventory.instance.setActivated(false);
 
@@ -76,7 +76,7 @@ public class UseMonkDiary3 : MonoBehaviour
         }
         else
         {
-            Debug.Log("(아닌 것 같다.)");
+            SeveralDialogue.instance.Failure();
             _11003_inputField.text = "";
             Inventory.instance.itemSetactive(true);
         }

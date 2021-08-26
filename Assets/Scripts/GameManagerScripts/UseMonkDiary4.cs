@@ -161,12 +161,11 @@ public class UseMonkDiary4 : MonoBehaviour
         {
             if(Useranswer[i] != answer[i])
             {
-                Debug.Log("정답이 아니다.");
+                SeveralDialogue.instance.Failure();
                 return;
             }
         }
 
-        Debug.Log("일기장4를 얻었다.");
         Inventory.instance.GetAnItem(Constants.real_monkdiary4_ID);
         Inventory.instance.RemoveAnItem(Constants.previous_monkdiary4_ID);
         StoryFlow.instance.ActiveChildMemo8();
