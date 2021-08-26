@@ -15,8 +15,8 @@ public class OrderManager : MonoBehaviour
         }
         else
         {
-            DontDestroyOnLoad(this.gameObject);
             instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
     }
     #endregion

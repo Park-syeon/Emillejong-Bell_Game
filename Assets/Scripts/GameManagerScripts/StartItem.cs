@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToEmilleRoom : MonoBehaviour
+public class StartItem : MonoBehaviour
 {
-    static public ToEmilleRoom instance;
-
+    public static StartItem instance;
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
     {
@@ -22,22 +21,12 @@ public class ToEmilleRoom : MonoBehaviour
     }
     #endregion
 
-    public GameObject[] physicCollider;
-
-    public void OpenCollider()
-    {
-        for (int i = 0; i < physicCollider.Length; i++)
-        {
-            physicCollider[i].SetActive(false);
-        }
-    }
-
     private void Start()
     {
         instance = this;
-        for(int i = 0; i< physicCollider.Length; i++)
-        {
-            physicCollider[i].SetActive(true);
-        }
+        Inventory.instance.GetAnItem(Constants.half_key1);
+        Inventory.instance.GetAnItem(81008);
+        Inventory.instance.GetAnItem(80006);
+
     }
 }

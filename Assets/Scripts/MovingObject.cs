@@ -6,6 +6,7 @@ public class MovingObject : MonoBehaviour
 {
     static public MovingObject instance;
     public string currentMapName; //transferMap 스크립트에 있는 transferMapName 변수의 값을 지정
+    public string pastMapName;
     public float speed;
     private Vector3 vector;
     //shift 키를 누르면 빨리 달릴 수 있도록 함.
