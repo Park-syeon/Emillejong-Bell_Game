@@ -28,6 +28,14 @@ public class ItemEvents : MonoBehaviour
     public Dialogue dialogue;
     private DialogueManager theDM;
 
+    private bool destroy;
+
+    public bool getDestroy()
+    {
+        return destroy;
+    }
+
+
     private void Start()
     {
         theDM = FindObjectOfType<DialogueManager>();
@@ -37,6 +45,7 @@ public class ItemEvents : MonoBehaviour
     public void playItemEvent(int _itemID)
     {
         itemID = _itemID;
+        destroy = true;
         switch (itemID)
         {
             case Constants.rock:
@@ -89,6 +98,10 @@ public class ItemEvents : MonoBehaviour
             Inventory.instance.GetAnItem(Constants.real_monkdiary2_ID);
             Inventory.instance.RemoveAnItem(itemID);
         }
+        else
+        {
+            destroy = false;
+        }
     }
     private void monkdiary1()
     {
@@ -99,6 +112,10 @@ public class ItemEvents : MonoBehaviour
             Inventory.instance.GetAnItem(Constants.real_monkdiary1_ID);
             Inventory.instance.RemoveAnItem(itemID);
             StoryFlow.instance.GotRealMonkDiary1(true);
+        }
+        else
+        {
+            destroy = false;
         }
     }
     private void brick()
