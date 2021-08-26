@@ -27,7 +27,7 @@ public class SeveralDialogue : MonoBehaviour
 
     public void alreadyItem()
     {
-        dialogue.sentences = new string[] { "이미 있는 아이템이다." };  //사실 나오면 뭔가 잘못된거다.
+        dialogue.sentences = new string[] { "이미 있는 아이템이다." };  //사실 나오면 뭔가 잘못된거다. bookshelf에서 나온다 쥬륵 하지만 괜찮다!
         theDM.ShowDialogue(dialogue);
     }
 
