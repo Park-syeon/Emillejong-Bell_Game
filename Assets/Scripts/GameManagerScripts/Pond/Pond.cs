@@ -6,9 +6,6 @@ public class Pond : MonoBehaviour
 {
     public static Pond instance;
 
-    public Dialogue dialogue;
-    private DialogueManager theDM;
-
     #region ΩÃ±€≈Ê
     private void Awake()    //ΩÃ±€≈Ê!!
     {
@@ -94,9 +91,6 @@ public class Pond : MonoBehaviour
         {
             WalkCheck[i] = 0;
         }
-        theDM = FindObjectOfType<DialogueManager>();
-
-
     }
 
     // Update is called once per frame
@@ -108,8 +102,7 @@ public class Pond : MonoBehaviour
             if (circleDone)
             {
                 Requirement.instance.HalfKeyUseActivate(true);
-                dialogue.sentences = new string[] { "ø¨∏¯ ø∑ ºÆªÛø°º≠ ø≠ºË±∏∏€¿Ã ∫∏¿Œ¥Ÿ." };
-                theDM.ShowDialogue(dialogue);
+                SeveralDialogue.instance.PondKey();
                 activated = false;
             }
         }
