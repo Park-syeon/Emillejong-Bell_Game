@@ -100,6 +100,7 @@ public class ItemEvents : MonoBehaviour
         }
         else
         {
+            SeveralDialogue.instance.CandleIsNotOn();
             destroy = false;
         }
     }
@@ -115,6 +116,7 @@ public class ItemEvents : MonoBehaviour
         }
         else
         {
+            SeveralDialogue.instance.CandleIsNotOn();
             destroy = false;
         }
     }
