@@ -49483,9 +49483,12 @@ MonoBehaviour:
   - {fileID: 2034727222}
   - {fileID: 822678800}
   - {fileID: 176892544}
+  - {fileID: 46667708}
   MessageColliders:
   - {fileID: 859089757}
   - {fileID: 1799006733}
+  - {fileID: 1812627205}
+  - {fileID: 254296802}
 --- !u!114 &574385758
 MonoBehaviour:
   m_ObjectHideFlags: 0
