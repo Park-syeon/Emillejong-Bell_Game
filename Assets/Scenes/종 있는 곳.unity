@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1dcd3466a5fe347a8b89b25a4eece3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapname: "\uC885 \uC788\uB294 \uBC29"
+  mapname: "\uC885 \uC788\uB294 \uACF3"
 --- !u!4 &1135690999
 Transform:
   m_ObjectHideFlags: 0
