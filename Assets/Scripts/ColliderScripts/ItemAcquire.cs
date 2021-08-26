@@ -20,13 +20,13 @@ public class ItemAcquire : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        GIcon.SetActive(true);
+//        GIcon.SetActive(true);
         GIcon.transform.position = this.gameObject.transform.position;
         IsTriggerActivated = true;
     }
     protected void OnTriggerExit2D(Collider2D collision)
     {
-        GIcon.SetActive(false);
+ //       GIcon.SetActive(false);
         IsTriggerActivated = false;
     }
 
@@ -47,7 +47,8 @@ public class ItemAcquire : MonoBehaviour
         if (connectitemID == DatabaseManager.instance.GetCurrentItemID())
         {
             ItemEvents.instance.playItemEvent(connectitemID);
-            Destroy(this.gameObject);
+            if(ItemEvents.instance.getDestroy())
+                Destroy(this.gameObject);
         }
     }
 }
