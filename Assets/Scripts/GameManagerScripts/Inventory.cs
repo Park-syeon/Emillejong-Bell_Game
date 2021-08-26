@@ -65,9 +65,6 @@ public class Inventory : MonoBehaviour
     public string itemSound;
     private int item;
 
-    private DialogueManager theDM;
-    public Dialogue dialogue;
-
     //getset함수
     public bool getActivated()
     {
@@ -113,7 +110,6 @@ public class Inventory : MonoBehaviour
         theAudio = FindObjectOfType<AudioManager>();
         inventory = theAudio.Find(inventorySound);
         item = theAudio.Find(itemSound);
-        theDM = FindObjectOfType<DialogueManager>();
     }
     public void RemoveSlot()
     {
@@ -262,8 +258,7 @@ public class Inventory : MonoBehaviour
             {
                 if (InventoryItemList[k].itemID == _itemID)
                 {
-                    dialogue.sentences = new string[] { "이미 있는 아이템이다." };  //사실 나오면 뭔가 잘못된거다.
-                    theDM.ShowDialogue(dialogue);
+                    SeveralDialogue.instance.alreadyItem();
                     return;
                 }
             }
@@ -271,13 +266,7 @@ public class Inventory : MonoBehaviour
             {
                 theAudio.sounds[item].Play();
                 InventoryItemList.Add(DatabaseManager.instance.itemList[i]);
-                if(_itemID/10000 == 9 && _itemID != Constants.basement_monkdiary)
-                {
-                    dialogue.sentences = new string[] { DatabaseManager.instance.itemList[i].itemDescription};
-                    theDM.ShowDialogue(dialogue);
-                }
-                dialogue.sentences = new string[] { DatabaseManager.instance.itemList[i].itemName + " 을 얻었다." };
-                theDM.ShowDialogue(dialogue);
+                SeveralDialogue.instance.GetItem(_itemID, i);
                 return;
             }
 
