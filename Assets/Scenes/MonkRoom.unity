@@ -4673,11 +4673,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1372587625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e89779469ac99844a480f0d5e733f85, type: 3}
+  m_Script: {fileID: 11500000, guid: f1fa1bb116819674ebdae3a09a538b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   connectitemID: 0
-  getItemID: 0
+  getItemID: 80010
   A: {fileID: 0}
 --- !u!61 &1372587628
 BoxCollider2D:
