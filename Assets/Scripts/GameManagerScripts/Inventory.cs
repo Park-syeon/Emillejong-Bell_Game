@@ -271,7 +271,12 @@ public class Inventory : MonoBehaviour
             {
                 theAudio.sounds[item].Play();
                 InventoryItemList.Add(DatabaseManager.instance.itemList[i]);
-                dialogue.sentences = new string[] { "아이템 " + DatabaseManager.instance.itemList[i].itemName + " 을 얻었다." };
+                if(_itemID/10000 == 9 && _itemID != Constants.basement_monkdiary)
+                {
+                    dialogue.sentences = new string[] { DatabaseManager.instance.itemList[i].itemDescription};
+                    theDM.ShowDialogue(dialogue);
+                }
+                dialogue.sentences = new string[] { DatabaseManager.instance.itemList[i].itemName + " 을 얻었다." };
                 theDM.ShowDialogue(dialogue);
                 return;
             }
