@@ -65,6 +65,7 @@ public class UseMonkDiary3 : MonoBehaviour
         {
 //            Debug.Log("여기까지2");
             Inventory.instance.GetAnItem(Constants.real_monkdiary3_ID);
+            SeveralDialogue.instance.AfterGetDiary3();
             Inventory.instance.GetAnItem(Constants.previous_monkdiary4_ID);
  //           Debug.Log("여기까지3");
             Inventory.instance.RemoveAnItem(Constants.previous_monkdiary3_ID); ;

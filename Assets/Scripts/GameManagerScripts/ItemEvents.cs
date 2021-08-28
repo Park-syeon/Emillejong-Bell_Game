@@ -95,6 +95,8 @@ public class ItemEvents : MonoBehaviour
     {
         if (Requirement.instance.GetIsCandleOn())
         {
+            dialogue.sentences = new string[] { "양초에 비추니 스님의 일기장에서 새로운  단어가 보인다." };
+            theDM.ShowDialogue(dialogue);
             Inventory.instance.GetAnItem(Constants.real_monkdiary2_ID);
             Inventory.instance.RemoveAnItem(itemID);
         }
@@ -122,6 +124,8 @@ public class ItemEvents : MonoBehaviour
     }
     private void brick()
     {
+        dialogue.sentences = new string[] { "진흙이 씻겨 나가니 작은 금속 물체가 보인다." };
+        theDM.ShowDialogue(dialogue);
         Inventory.instance.GetAnItem(Constants.half_key2);
         Inventory.instance.RemoveAnItem(itemID);
     }
@@ -142,6 +146,8 @@ public class ItemEvents : MonoBehaviour
     }
     private void realEmille()
     {
+        dialogue.sentences = new string[] { "물에 젖은 에밀레종제작문서에 새로운 문장이 보인다." };
+        theDM.ShowDialogue(dialogue);
         Inventory.instance.GetAnItem(Constants.real_realEmille);
         Inventory.instance.RemoveAnItem(itemID);
     }

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: c3fcd1f2d18499547bf453f20de47135
+  - enabled: 1
     path: Assets/Scenes/temple.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -21,12 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/library.unity
     guid: 036978d0e0d0caa4f9104b84df0d544e
   - enabled: 1
-    path: Assets/Scenes/Ending.unity
-    guid: 9b14ded8c93b5944f94dcee06877c579
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: "Assets/Scenes/\uC9C0\uD558\uC2E4.unity"
     guid: 50c303cd93aad6e4080406948db9b6ea
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 9b14ded8c93b5944f94dcee06877c579
   m_configObjects: {}

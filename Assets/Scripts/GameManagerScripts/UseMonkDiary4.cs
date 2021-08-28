@@ -36,6 +36,9 @@ public class UseMonkDiary4 : MonoBehaviour
     private int cur = 0;
     private int curanswerNum = 0;
 
+    public GameObject[] inactiveObjects;
+    public GameObject[] activeObjects;
+
 
 
     // Start is called before the first frame update
@@ -171,6 +174,10 @@ public class UseMonkDiary4 : MonoBehaviour
         StoryFlow.instance.ActiveChildMemo8();
         StoryFlow.instance.ActiveEndingPoint();
         Inventory.instance.setActivated(false);
+        SeveralDialogue.instance.AfterGetDiary4();
+        GameObjectActive goba = new GameObjectActive();
+        goba.InactiveObjects(inactiveObjects);
+        goba.ActiveObjects(activeObjects);
     }
     private void ResetDiary4()
     {
