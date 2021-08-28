@@ -135,7 +135,9 @@ public class Inventory : MonoBehaviour
             selectedTabImages[i].GetComponent<Image>().color = color;
         }
         Description_Text.text = "";
-        Picture = null;
+        Color color2 = Picture.GetComponent<Image>().color;
+        color2.a = 0.0f;
+        Picture.sprite = null ;
         StartCoroutine(SelectedTabEffectCoroutine());
     }
     IEnumerator SelectedTabEffectCoroutine()
