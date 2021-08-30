@@ -108,7 +108,6 @@ public class EndingUI : MonoBehaviour
 
     private void setEndPoint()
     {
-        /*
         if (Inventory.instance.FindItem(Constants.basement_monkdiary))
             endPoint = 3;
         else if(Inventory.instance.FindItem(Constants.previous_realEmille) || Inventory.instance.FindItem(Constants.real_realEmille))
@@ -119,8 +118,6 @@ public class EndingUI : MonoBehaviour
         {
             endPoint = 1;
         }
-        */
-        endPoint = 1;
     }
 
     public GameObject black;
@@ -143,8 +140,10 @@ public class EndingUI : MonoBehaviour
         }
     private void end(Dialogue _dialogue)
     {
+        CanvasNew canvas;
+        canvas = FindObjectOfType<CanvasNew>();
+        canvas.theEnding();
         ended = true;
-        ending.gameObject.SetActive(false);
         black.SetActive(true);
         StartCoroutine("RunFadeOut");
         theDM.ShowDialogue(_dialogue);

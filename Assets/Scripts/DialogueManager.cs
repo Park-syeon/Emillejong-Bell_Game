@@ -128,7 +128,7 @@ public class DialogueManager : MonoBehaviour
         //click = false;
         if (talking)
         {
-            if (skipB)//
+            if (skipB || Input.GetKeyDown(KeyCode.Z))//
             {
                 count++;
                 text.text = "";

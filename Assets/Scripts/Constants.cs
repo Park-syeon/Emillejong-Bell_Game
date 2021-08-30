@@ -22,4 +22,7 @@ static class Constants
     public const int key65 = 90065;
     public const int key77 = 90077;
     public const int basement_monkdiary = 99999;
+    public const int basement_monkdiary_die = 99996;
+    public const int letter1 = 80009;
+    public const int letter2 = 80010;
 }

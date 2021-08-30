@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColliderEmilleRoom : MonoBehaviour
 {
-    public string mapname = "Á¾ ÀÖ´Â ¹æ";
+    public string mapname = "Á¾ ÀÖ´Â °÷";
     public static ColliderEmilleRoom instance;
     #region ½Ì±ÛÅæ
     private void Awake()    //½Ì±ÛÅæ!!

@@ -22,17 +22,22 @@ public class ToEmilleRoom : MonoBehaviour
     }
     #endregion
 
-    public GameObject physicCollider;
+    public GameObject[] physicCollider;
 
     public void OpenCollider()
     {
-        physicCollider.SetActive(false);
+        for (int i = 0; i < physicCollider.Length; i++)
+        {
+            physicCollider[i].SetActive(false);
+        }
     }
 
     private void Start()
     {
         instance = this;
-        physicCollider.SetActive(true);
-
+        for(int i = 0; i< physicCollider.Length; i++)
+        {
+            physicCollider[i].SetActive(true);
+        }
     }
 }

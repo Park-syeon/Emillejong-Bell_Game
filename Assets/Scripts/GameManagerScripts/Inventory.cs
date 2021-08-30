@@ -124,6 +124,12 @@ public class Inventory : MonoBehaviour
     {
         RemoveSlot();
         SelectedTab();
+        Description_Text.text = "";
+        Color color2 = Picture.GetComponent<Image>().color;
+        color2.a = 0.0f;
+        Picture.GetComponent<Image>().color = color2;
+        Picture.sprite = null;
+
     }   //탭 활성화
     public void SelectedTab()
     {
@@ -134,8 +140,6 @@ public class Inventory : MonoBehaviour
         {
             selectedTabImages[i].GetComponent<Image>().color = color;
         }
-        Description_Text.text = "";
-        Picture = null;
         StartCoroutine(SelectedTabEffectCoroutine());
     }
     IEnumerator SelectedTabEffectCoroutine()
@@ -190,6 +194,9 @@ public class Inventory : MonoBehaviour
         }   //텝에 따라서 플레이어 소유 아이템을 분류
         page = 0;
         pageNum = ((InventoryTabList.Count - 1) / MAX_SLOT_COUNT) +1;
+        Color color2 = Picture.GetComponent<Image>().color;
+        color2.a = 1f;
+        Picture.GetComponent<Image>().color = color2;
         SelectedItem();
 
     }   //아이템 
@@ -246,6 +253,9 @@ public class Inventory : MonoBehaviour
         Color color = emptySlot.GetComponent<Image>().color;
         color.a = 0.5f;
         emptySlot.GetComponent<Image>().color = color;
+        Color color2 = Picture.GetComponent<Image>().color;
+        color2.a = 0.0f;
+        Picture.GetComponent<Image>().color = color2;
         emptyText.text = "아이템이 없습니다.";
 
     }
