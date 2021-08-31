@@ -25,4 +25,5 @@ static class Constants
     public const int basement_monkdiary_die = 99996;
     public const int letter1 = 80009;
     public const int letter2 = 80010;
+    public const int fakeEmille = 80007;
 }

@@ -53,7 +53,7 @@ public class SeveralDialogue : MonoBehaviour
 
     public void yetLetter2()
     {
-        dialogue.sentences = new string[] { "(냄새나는 쓰레기통이다. 윽…! 몇 십년 동안 비우지 않은 것처럼 보인다!!!! 멀리하고 싶다.)" };
+        dialogue.sentences = new string[] { "(냄새나는 쓰레기통이다. 윽…! 몇 십년 동안 비우지 않은 것처럼 보인다. 멀리하고 싶다!)" };
         theDM.ShowDialogue(dialogue);
     }
 
