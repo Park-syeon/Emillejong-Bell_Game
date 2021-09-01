@@ -18,7 +18,7 @@ public class SeveralDialogue : MonoBehaviour
 
     public void GetItem(int _itemID, int _itemIndex)
     {
-        if ((_itemID / 10000 == 9 && _itemID < 99000)||_itemID == 99997)
+        if ((_itemID / 10000 == 9 && _itemID < 99000)||_itemID == Constants.basement_monkdiary_die)
         {
             dialogue.sentences = new string[] { DatabaseManager.instance.itemList[_itemIndex].itemDescription };
             theDM.ShowDialogue(dialogue);
