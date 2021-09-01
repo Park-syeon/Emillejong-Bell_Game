@@ -85,7 +85,7 @@ public class SeveralDialogue : MonoBehaviour
     }
     public void AfterGetDiary3()
     {
-        dialogue.sentences = new string[] { "일기장3 뒷부분에서 찢어진 종이조각들이 떨어졌다." };
+        dialogue.sentences = new string[] { "일기장3 뒷부분에서 찢어진 종이조각들이 바람에 흩어지며 날아갔다." };
         theDM.ShowDialogue(dialogue);
     }
     public void SubDialogue(string _name)
