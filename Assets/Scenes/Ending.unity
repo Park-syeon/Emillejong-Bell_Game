@@ -1358,7 +1358,13 @@ MonoBehaviour:
     - "\uB2E4 \uADC0\uCC2E\uB2E4. \uB108\uB294 \uC0B4\uC544\uC788\uC5B4\uC120 \uC548\uB41C\uB2E4
       \uACBD\uB2E5\uC655.\n\uBD09\uB355\uC2B9\uB824... \uB108\uB3C4 \uACB0\uCF54
       \uC6A9\uC11C\uCE58 \uC54A\uC744 \uAC83\uC774\uB2E4.."
-    sprites: []
+    sprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     dialogueWindows:
     - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
     - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
@@ -1382,8 +1388,24 @@ MonoBehaviour:
     - "\uADF8\uB0A0 \uBC24.. \uBD09\uB355\uC0AC\uB294 \uC628\uD1B5 \uBD88\uAE38\uC5D0
       \uD729\uC2F8\uC600\uACE0, \uB2E4\uC74C \uB0A0 \uC544\uCE68 \uC5D0\uBC00\uB808\uC885\uB9CC\uC774
       \uADF8\uACF3\uC5D0 \uC11C\uC788\uC5C8\uB2E4.."
-    sprites: []
-    dialogueWindows: []
+    sprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    dialogueWindows:
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
   monkB:
     sentences:
     - "(\uB07C\uC775-\uD0C1)"
@@ -1410,10 +1432,16 @@ MonoBehaviour:
     - "\uBBF8\uC548\uD558\uB124 \uD669..\uC9C4... \uCFE8\uB7ED- \uD558\uC544.. \uACBD\uB2E5\uC655\uC758
       \uD6A1\uD3EC\uB97C \uB9C9\uC73C\uB824\uBA74.. \uD558\uC544.. \uADF8\uAC83..
       \uBC16\uC5D0\uB294.. \uC73C\uD5C8..."
+    - "(\uD480\uC369-...)"
     - "\uC544\uC544.. \uB0B4\uAC00 \uBB34\uC2A8 \uC9D3\uC744..! \uC544\uC544\uC544..."
-    - "(\uC790\uC2E0\uC758 \uC774\uAE30\uC2EC\uC73C\uB85C \uBD09\uB355\uC2B9\uB824\uB97C
-      \uD574\uD588\uB2E4\uB294 \uC8C4\uCC45\uAC10\uC5D0 \uD729\uC2F8\uC5EC \uD669\uC9C4\uC740
-      \uADF8 \uC790\uB9AC\uC5D0\uC11C \uC790\uACB0\uD55C\uB2E4.)"
+    - .......
+    - .......
+    - ........
+    - "\uACBD\uB2E5\uC655... \uADF8\uB798.. \uADF8\uB188\uB9CC \uC5C6\uC5C8\uC5B4\uB3C4..
+      \uADF8\uB188\uC774 \uC774 \uC77C\uC758 \uC6D0\uD749\uC774\uC9C0.. \uC73C\uC544\uC544!!!!
+      \uC73C\uC544\uC544\uC544!!!!!"
+    - "(\uACBD\uB2E5\uC655\uC5D0\uAC8C \uBCF5\uC218\uD558\uAE30\uB85C \uB9C8\uC74C\uBA39\uC740
+      \uD669\uC9C4\uC740 \uBC29\uC744 \uB6F0\uCCD0\uB098\uAC04\uB2E4...)"
     - "(\uC528\uC775- \uBD09\uB355\uC2B9\uB824...\uC758\uBBF8\uC2EC\uC7A5\uD55C \uBBF8\uC18C\uB97C
       \uC9C0\uC73C\uBA70 \uC8FD\uC5B4\uAC04\uB2E4.)"
     sprites: []
@@ -1478,8 +1506,50 @@ MonoBehaviour:
     - "(\uBD09\uB355\uC2B9\uB824\uB294 \uC5ED\uBAA8\uB97C \uBAA8\uC758\uD55C \uC8C4\uB85C
       \uCC38\uC218\uD615\uC5D0 \uCC98\uD574\uC9C0\uAC8C \uB418\uC5C8\uB2E4.)"
     - -The End-
-    sprites: []
-    dialogueWindows: []
+    sprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    dialogueWindows:
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
   haengsuA:
     sentences:
     - "\uC654\uB290\uB0D0.. \uBA70\uCE60 \uAC04 \uBCF4\uC774\uC9C0 \uC54A\uB354\uB2C8
@@ -1491,7 +1561,13 @@ MonoBehaviour:
     - ........
     - "(\uADF8\uB0A0 \uC774\uD6C4, \uD669\uC9C4\uC740 \uC790\uCDE8\uB97C \uAC10\uCDC4\uACE0,
       \uD669\uC9C4\uC744 \uBCF8 \uC0AC\uB78C\uC740 \uC544\uBB34\uB3C4 \uC5C6\uC5C8\uB2E4.)"
-    sprites: []
+    sprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     dialogueWindows:
     - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
     - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
@@ -1507,7 +1583,11 @@ MonoBehaviour:
       \uBD09\uB355\uC2B9\uB824\uC640 \uD55C \uD328\uACA0\uC9C0..!"
     - "(\uCFF5-.......)"
     - "\uBD09\uB355\uC2B9\uB824... \uB108\uB3C4 \uC6A9\uC11C\uCE58 \uC54A\uC744 \uAC83\uC774\uB2E4..!"
-    sprites: []
+    sprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     dialogueWindows:
     - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
     - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
@@ -1520,8 +1600,12 @@ MonoBehaviour:
       \uC798\uBABB\uB418\uBA74 \uD589\uC5EC \uD589\uC218\uB2D8\uAED8\uC11C \uD5D8\uD55C
       \uAF34\uC744 \uB2F9\uD558\uC2E4\uAE4C \uD558\uC5EC... \uC815\uB9D0 \uC8C4\uC1A1\uD569\uB2C8\uB2E4..
       \uD750\uC73D..!"
-    sprites: []
-    dialogueWindows: []
+    sprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    dialogueWindows:
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
+    - {fileID: -3164809056393425246, guid: 9e9331d825b1c0b46a6ce95d503330eb, type: 3}
   ending: {fileID: 1076602861}
   black: {fileID: 1367487805}
 --- !u!4 &1616259278
