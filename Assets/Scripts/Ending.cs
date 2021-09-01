@@ -45,6 +45,10 @@ public class Ending : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.G))
                 {
                     Debug.Log("»Ï»Ï");
+                    ColliderActiveManager.instance.move("Ending");
+                    Camera mainCamera = FindObjectOfType<Camera>();
+                    mainCamera.enabled = false;
+                    MovingObject.instance.gameObject.SetActive(false);
                     SceneManager.LoadScene("Ending");
                 }
             }

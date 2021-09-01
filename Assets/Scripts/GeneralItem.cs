@@ -8,6 +8,10 @@ public class GeneralItem : Item
     {
         DatabaseManager.instance.NewCurrentItemID(itemID);
         Inventory.instance.setActivated(false);
+        if(itemID == Constants.letter1)
+        {
+            SeveralDialogue.instance.Letter1();
+        }
     }
 
 }
