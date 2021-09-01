@@ -40,6 +40,7 @@ public class Inventory : MonoBehaviour
 
     public GameObject go;   //인벤토리 활성화 불활성화
     public GameObject[] selectedTabImages;  //탭 이미지 배열  0(스님의 일기장(, (1스님의 쪽지), 2(동자승의 쪽지), 3기타?
+    public Sprite map;
     private const int columnNum = 2; //탭의 가로 요소 개수
     private const int rowNum = 2; // 캡의 세로요소 개수
 
@@ -125,10 +126,10 @@ public class Inventory : MonoBehaviour
         RemoveSlot();
         SelectedTab();
         Description_Text.text = "";
-        Color color2 = Picture.GetComponent<Image>().color;
-        color2.a = 0.0f;
-        Picture.GetComponent<Image>().color = color2;
-        Picture.sprite = null;
+ //       Color color2 = Picture.GetComponent<Image>().color;
+//        color2.a = 0.0f;
+//        Picture.GetComponent<Image>().color = color2;
+        Picture.sprite = map;
 
     }   //탭 활성화
     public void SelectedTab()
@@ -194,9 +195,9 @@ public class Inventory : MonoBehaviour
         }   //텝에 따라서 플레이어 소유 아이템을 분류
         page = 0;
         pageNum = ((InventoryTabList.Count - 1) / MAX_SLOT_COUNT) +1;
-        Color color2 = Picture.GetComponent<Image>().color;
-        color2.a = 1f;
-        Picture.GetComponent<Image>().color = color2;
+//        Color color2 = Picture.GetComponent<Image>().color;
+//        color2.a = 1f;
+ //       Picture.GetComponent<Image>().color = color2;
         SelectedItem();
 
     }   //아이템 
