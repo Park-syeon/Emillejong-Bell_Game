@@ -143,14 +143,19 @@ public class EndingUI : MonoBehaviour
         CanvasNew canvas;
         canvas = FindObjectOfType<CanvasNew>();
         canvas.theEnding();
-        ended = true;
         black.SetActive(true);
-        StartCoroutine("RunFadeOut");
         theDM.ShowDialogue(_dialogue);
+        ended = true;
     }
 
+    private bool done = false;
     private void Update()
     {
+        if(ended && !DialogueManager.instance.talking && !done)
+        {
+            done = true;
+            StartCoroutine("RunFadeOut");
+        }
         if (ended && !stopkeyinput)
         {
             if(Input.GetKeyDown(KeyCode.Return))
