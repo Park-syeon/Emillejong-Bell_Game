@@ -75,8 +75,7 @@ public class SeveralDialogue : MonoBehaviour
     }
     public void AfterGetDiary4()
     {
-        dialogue.sentences = new string[] { "이제 절 입구로 가면 엔딩을 보실 수 있습니다." };
-        theDM.ShowDialogue(dialogue);   
+        SubDialogue("afterGetDiary4");
     }
     public void Letter1()
     {
